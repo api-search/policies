@@ -1,8 +1,8 @@
-## Contract Metadata (contract-metadata)
+## API Contract Metadata (contract-metadata)
 Unique identifier, name, description, tags, and other metadata for the contract that defines the purpose of the API Contract, and how it benefits API producer and consumers, establishing the base of the agreement.
 
 ```
-name: Contract Metadata
+name: API Contract Metadata
 slug: contract-metadata
 scope: Business Contract
 property: none
@@ -29,11 +29,11 @@ solutions:
   - Discovery
   - Onboarding
 ```
-## Unique Identifiers (contract-metadata-unique-identifiers)
+## API Contract Unique Identifiers (contract-metadata-unique-identifiers)
 Providing unique identifiers for API contracts, as well as the APIs that are indexed as part of a contract, providing a key reference.
 
 ```
-name: Unique Identifiers
+name: API Contract Unique Identifiers
 slug: contract-metadata-unique-identifiers
 scope: Business Contract
 property: aid
@@ -49,11 +49,11 @@ tags:
 rules:
   - apis-json-specification-aid-info
 ```
-## Name (contract-metadata-names)
+## API Contract Name (contract-metadata-names)
 Providing a clear, descriptive, and concise name for each API contract, as well as the APIs it contains, properly defining the scope.
 
 ```
-name: Name
+name: API Contract Name
 slug: contract-metadata-names
 scope: Business Contract
 property: name
@@ -69,11 +69,11 @@ tags:
 rules:
   - apis-json-name-info
 ```
-## Descriptions (contract-metadata-descriptions)
+## API Contract Descriptions (contract-metadata-descriptions)
 Providing a robust description of the API contract, as well as each API it contains, providing my context for stakeholders of the contract.
 
 ```
-name: Descriptions
+name: API Contract Descriptions
 slug: contract-metadata-descriptions
 scope: Business Contract
 property: description
@@ -89,11 +89,11 @@ tags:
 rules:
   - apis-json-description-info
 ```
-## Images (contract-metadata-images)
+## API Contract Images (contract-metadata-images)
 Including images as part of the metadata for your APIs helps make APIs more visible as part of portals, documentation, and other resources.
 
 ```
-name: Images
+name: API Contract Images
 slug: contract-metadata-images
 scope: Business Contract
 property: image
@@ -109,11 +109,11 @@ tags:
 rules:
   - apis-json-image-info
 ```
-## Tags (contract-metadata-tags)
+## API Contract Tags (contract-metadata-tags)
 Tags provide a bounded context for your APIs, providing keywords that help organize APIs by domains, and  make them more discoverable.
 
 ```
-name: Tags
+name: API Contract Tags
 slug: contract-metadata-tags
 scope: Business Contract
 property: tags
@@ -162,11 +162,11 @@ solutions:
   - Discovery
   - Onboarding
 ```
-## Unique Identifiers (api-metadata-unique-identifiers)
+## API Unique Identifiers (api-metadata-unique-identifiers)
 Providing unique identifiers for API apis, as well as the APIs that are indexed as part of an API, providing a key reference for discovery and automating around a contract.
 
 ```
-name: Unique Identifiers
+name: API Unique Identifiers
 slug: api-metadata-unique-identifiers
 scope: Business Contract
 property: aid
@@ -184,11 +184,11 @@ rules:
   - apis-json-apis-aid-error
   - apis-json-apis-aid-info
 ```
-## Name (api-metadata-names)
+## API Name (api-metadata-names)
 Providing a clear, descriptive, and concise name for each API, as well as the APIs it contains, properly defining the scope, with an intuitive first impression of an API.
 
 ```
-name: Name
+name: API Name
 slug: api-metadata-names
 scope: Business Contract
 property: name
@@ -205,11 +205,11 @@ tags:
 rules:
   - apis-json-apis-name-info
 ```
-## Descriptions (api-metadata-descriptions)
+## API Description (api-metadata-descriptions)
 Providing a robust description of each API, providing the right amount of information for consumers to understand what is possible and what the business use case is.
 
 ```
-name: Descriptions
+name: API Description
 slug: api-metadata-descriptions
 scope: Business Contract
 property: description
@@ -226,11 +226,11 @@ tags:
 rules:
   - apis-json-apis-description-info
 ```
-## Images (api-metadata-images)
+## API Image (api-metadata-images)
 Including images as part of the metadata for your APIs helps make APIs more visible as part of portals, documentation, and other resources.
 
 ```
-name: Images
+name: API Image
 slug: api-metadata-images
 scope: Business Contract
 property: image
@@ -246,11 +246,11 @@ tags:
 rules:
   - apis-json-apis-image-info
 ```
-## Tags (api-metadata-tags)
+## API Tag (api-metadata-tags)
 Tags provide a bounded context for your APIs, providing keywords that help organize APIs by domains, and  make them more discoverable.
 
 ```
-name: Tags
+name: API Tag
 slug: api-metadata-tags
 scope: Business Contract
 property: tags
@@ -291,16 +291,16 @@ solutions:
 rules:
   - apis-json-url-info
 ```
-## Human URL (human-url)
+## API Human URL (human-url)
 Providing a valid URL to a landing page for the API that is designed for humans to use when learning more about an API.
 
 ```
-name: Human URL
+name: API Human URL
 slug: human-url
 scope: Business Contract
 property: humanURL
 type: none
-guidance: api/human-url
+guidance: apis/human-url
 image: /images/human-url.png
 description: >-
   Providing a valid URL to a landing page for the API that is designed for
@@ -313,16 +313,16 @@ solutions:
 rules:
   - apis-json-apis-humanURL-info
 ```
-## Base URL (base-url)
+## API Base URL (base-url)
 Providing a valid URL to the base for an API that is designed for machines to use when making call to an API by an consumer.
 
 ```
-name: Base URL
+name: API Base URL
 slug: base-url
 scope: Business Contract
 property: baseURL
 type: none
-guidance: api/base-url
+guidance: apis/base-url
 image: /images/base-url.png
 description: >-
   Providing a valid URL to the base for an API that is designed for machines to

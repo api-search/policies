@@ -1,5 +1,5 @@
 # Contract Metadata
-- name: Contract Metadata
+- name: API Contract Metadata
   slug: contract-metadata
   scope: Business Contract
   property: none
@@ -22,7 +22,7 @@
     - Communication    
     - Discovery     
     - Onboarding  
-- name: Unique Identifiers
+- name: API Contract Unique Identifiers
   slug: contract-metadata-unique-identifiers
   scope: Business Contract
   property: aid
@@ -35,7 +35,7 @@
     - Discovery
   rules:
     - apis-json-specification-aid-info  
-- name: Name
+- name: API Contract Name
   slug: contract-metadata-names
   scope: Business Contract
   property: name
@@ -48,7 +48,7 @@
     - Discovery 
   rules:
      - apis-json-name-info 
-- name: Descriptions
+- name: API Contract Descriptions
   slug: contract-metadata-descriptions
   scope: Business Contract
   property: description
@@ -61,7 +61,7 @@
     - Discovery 
   rules:
     - apis-json-description-info
-- name: Images
+- name: API Contract Images
   slug: contract-metadata-images
   scope: Business Contract
   property: image
@@ -74,7 +74,7 @@
     - Discovery 
   rules:
     - apis-json-image-info
-- name: Tags
+- name: API Contract Tags
   slug: contract-metadata-tags
   scope: Business Contract
   property: tags
@@ -114,7 +114,7 @@
     - Communication    
     - Discovery     
     - Onboarding  
-- name: Unique Identifiers
+- name: API Unique Identifiers
   slug: api-metadata-unique-identifiers
   scope: Business Contract
   property: aid
@@ -128,7 +128,7 @@
   rules:
     - apis-json-apis-aid-error
     - apis-json-apis-aid-info   
-- name: Name
+- name: API Name
   slug: api-metadata-names
   scope: Business Contract
   property: name
@@ -141,7 +141,7 @@
     - Discovery  
   rules:
     - apis-json-apis-name-info
-- name: Descriptions
+- name: API Description
   slug: api-metadata-descriptions
   scope: Business Contract
   property: description
@@ -154,7 +154,7 @@
     - Discovery 
   rules:
     - apis-json-apis-description-info
-- name: Images
+- name: API Image
   slug: api-metadata-images
   scope: Business Contract
   property: image
@@ -167,7 +167,7 @@
     - Discovery
   rules:
     - apis-json-apis-image-info 
-- name: Tags
+- name: API Tag
   slug: api-metadata-tags
   scope: Business Contract
   property: tags
@@ -200,7 +200,7 @@
   rules:
     - apis-json-url-info
 
-- name: Human URL
+- name: API Human URL
   slug: human-url
   scope: Business Contract
   property: humanURL
@@ -215,7 +215,7 @@
     - Access 
   rules:
     - apis-json-apis-humanURL-info
-- name: Base URL
+- name: API Base URL
   slug: base-url
   scope: Business Contract
   property: baseURL
