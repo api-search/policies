@@ -4,19 +4,15 @@
   scope: Business Contract
   property: none
   type: none  
-  guidance: contract/metadata
+  guidance: contracts/metadata
   image: /images/meta-data.png
   description: Unique identifier, name, description, tags, and other metadata for the contract that defines the purpose of the API Contract, and how it benefits API producer and consumers, establishing the base of the agreement.
   policies:
     - contract-metadata-unique-identifiers
-    - apis-json-url-info
     - contract-metadata-names
     - contract-metadata-descriptions
     - contract-metadata-images
     - contract-metadata-tags
-    - apis-json-common-info
-    - apis-json-created-info  
-    - apis-json-modified-info      
   tags:
     - Contracts
     - Discovery
@@ -31,7 +27,7 @@
   scope: Business Contract
   property: aid
   type: none
-  guidance: contract/unique-identifiers
+  guidance: contracts/unique-identifiers
   image: /images/unique-identifiers.png
   description: Providing unique identifiers for API contracts, as well as the APIs that are indexed as part of a contract, providing a key reference.
   tags:
@@ -44,7 +40,7 @@
   scope: Business Contract
   property: name
   type: none  
-  guidance: contract/names
+  guidance: contracts/names
   image: /images/names.png
   description: Providing a clear, descriptive, and concise name for each API contract, as well as the APIs it contains, properly defining the scope.
   tags:
@@ -57,7 +53,7 @@
   scope: Business Contract
   property: description
   type: none  
-  guidance: contract/descriptions
+  guidance: contracts/descriptions
   image: /images/descriptions.png
   description: Providing a robust description of the API contract, as well as each API it contains, providing my context for stakeholders of the contract.
   tags:
@@ -70,7 +66,7 @@
   scope: Business Contract
   property: image
   type: none  
-  guidance: contract/images
+  guidance: contracts/images
   image: /images/images.png
   description: Including images as part of the metadata for your APIs helps make APIs more visible as part of portals, documentation, and other resources.
   tags:
@@ -83,7 +79,7 @@
   scope: Business Contract
   property: tags
   type: none  
-  guidance: contract/tags
+  guidance: contracts/tags
   image: /images/tags.png
   description: Tags provide a bounded context for your APIs, providing keywords that help organize APIs by domains, and  make them more discoverable.
   tags:
@@ -100,9 +96,9 @@
   scope: Business Contract
   property: none
   type: none  
-  guidance: api/metadata
+  guidance: apis/metadata
   image: /images/meta-data.png
-  description: Unique identifier, name, description, tags, and other metadata for the API that defines the purpose of the API API, and how it benefits API producer and consumers, establishing the base of the agreement.
+  description: Unique identifier, name, description, tags, and other metadata for the API that defines the purpose of each individual API, and how it benefits API producer and consumers, establishing the base of the agreement.
   policies:
     - api-metadata-unique-identifiers
     - api-metadata-names
@@ -123,9 +119,9 @@
   scope: Business Contract
   property: aid
   type: none
-  guidance: api/unique-identifiers
+  guidance: apis/unique-identifiers
   image: /images/unique-identifiers.png
-  description: Providing unique identifiers for API apis, as well as the APIs that are indexed as part of a api, providing a key reference.
+  description: Providing unique identifiers for API apis, as well as the APIs that are indexed as part of an API, providing a key reference for discovery and automating around a contract.
   tags:
     - APIs
     - Discovery
@@ -137,9 +133,9 @@
   scope: Business Contract
   property: name
   type: none  
-  guidance: api/names
+  guidance: apis/names
   image: /images/names.png
-  description: Providing a clear, descriptive, and concise name for each API api, as well as the APIs it contains, properly defining the scope.
+  description: Providing a clear, descriptive, and concise name for each API, as well as the APIs it contains, properly defining the scope, with an intuitive first impression of an API.
   tags:
     - APIs
     - Discovery  
@@ -150,9 +146,9 @@
   scope: Business Contract
   property: description
   type: none  
-  guidance: api/descriptions
+  guidance: apis/descriptions
   image: /images/descriptions.png
-  description: Providing a robust description of the API api, as well as each API it contains, providing my context for stakeholders of the api.
+  description: Providing a robust description of each API, providing the right amount of information for consumers to understand what is possible and what the business use case is.
   tags:
     - APIs
     - Discovery 
@@ -163,7 +159,7 @@
   scope: Business Contract
   property: image
   type: none  
-  guidance: api/images
+  guidance: apis/images
   image: /images/images.png
   description: Including images as part of the metadata for your APIs helps make APIs more visible as part of portals, documentation, and other resources.
   tags:
@@ -176,7 +172,7 @@
   scope: Business Contract
   property: tags
   type: none  
-  guidance: api/tags
+  guidance: apis/tags
   image: /images/tags.png
   description: Tags provide a bounded context for your APIs, providing keywords that help organize APIs by domains, and  make them more discoverable.
   tags:
@@ -188,12 +184,28 @@
     - apis-json-apis-tags-upper-case-info    
 
 # URLs
+- name: API Contract URL
+  slug: apis-json-url-info
+  scope: Business Contract
+  property: url
+  type: none
+  guidance: apis/apis-json-url
+  image: /images/url.png
+  description: Providing the valid URL for the APIs.json contract, identifying the source of the contract which may or may not be where it is found, helping make contract authoritative.
+  tags:
+    - URLs
+  solutions:
+    - Onboarding 
+    - Access 
+  rules:
+    - apis-json-url-info
+
 - name: Human URL
   slug: human-url
   scope: Business Contract
   property: humanURL
   type: none
-  guidance: api/human-url
+  guidance: apis/human-url
   image: /images/human-url.png
   description: Providing a valid URL to a landing page for the API that is designed for humans to use when learning more about an API.
   tags:
@@ -208,7 +220,7 @@
   scope: Business Contract
   property: baseURL
   type: none  
-  guidance: api/base-url
+  guidance: apis/base-url
   image: /images/base-url.png
   description: Providing a valid URL to the base for an API that is designed for machines to use when making call to an API by an consumer.
   tags:
@@ -1183,6 +1195,7 @@
     - 3rd-Party
     - Producers
   rules:
+    - apis-json-common-info
     - openapi-components-parameters-error
     - openapi-components-parameters-info
     - openapi-components-examples-error
@@ -1415,6 +1428,48 @@
     - Properties
     - 3rd-Party
 
+# Change
+- name: Created Date
+  slug: apis-json-created-info
+  scope: Business Contract
+  property: created
+  type: none  
+  guidance: change/created
+  image: /images/created.png
+  description: Providing the data in which an API contract was created, establishing the inception of a specific contract involving one or more APIs, which defines the age of the contract. 
+  tags:
+    - Dates
+    - Change 
+  solutions:
+    - Alignment  
+    - Change
+    - Communication
+    - Consistency
+    - Quality
+    - Reliability
+  rules:
+    - apis-json-created-info
+- name: Modified Date
+  slug: apis-json-modified-info
+  scope: Business Contract
+  property: modified
+  type: none  
+  guidance: change/modified
+  image: /images/modified.png
+  description: Providing the data in which an API contract was last modified, tracking the change that occurs with each API contract, understanding the velocity as well as stagnation of APIs.
+  tags:
+    - Dates
+    - Change 
+  solutions:
+    - Alignment  
+    - Change
+    - Communication
+    - Consistency
+    - Quality
+    - Reliability
+  rules:
+    - apis-json-modified-info    
+
 # Road Map
 - name: Road Map
   slug: road-map
@@ -1465,7 +1520,6 @@
   tags:
     - Properties
     - 3rd-Party   
-
 - name: Versioning
   slug: versioning
   scope: Business Contract

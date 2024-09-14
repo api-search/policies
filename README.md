@@ -1,4 +1,4 @@
-## Contract Metadata
+## Contract Metadata (contract-metadata)
 Unique identifier, name, description, tags, and other metadata for the contract that defines the purpose of the API Contract, and how it benefits API producer and consumers, establishing the base of the agreement.
 
 ```
@@ -7,7 +7,7 @@ slug: contract-metadata
 scope: Business Contract
 property: none
 type: none
-guidance: contract/metadata
+guidance: contracts/metadata
 image: /images/meta-data.png
 description: >-
   Unique identifier, name, description, tags, and other metadata for the
@@ -15,14 +15,10 @@ description: >-
   producer and consumers, establishing the base of the agreement.
 policies:
   - contract-metadata-unique-identifiers
-  - apis-json-url-info
   - contract-metadata-names
   - contract-metadata-descriptions
   - contract-metadata-images
   - contract-metadata-tags
-  - apis-json-common-info
-  - apis-json-created-info
-  - apis-json-modified-info
 tags:
   - Contracts
   - Discovery
@@ -33,7 +29,7 @@ solutions:
   - Discovery
   - Onboarding
 ```
-## Unique Identifiers
+## Unique Identifiers (contract-metadata-unique-identifiers)
 Providing unique identifiers for API contracts, as well as the APIs that are indexed as part of a contract, providing a key reference.
 
 ```
@@ -42,7 +38,7 @@ slug: contract-metadata-unique-identifiers
 scope: Business Contract
 property: aid
 type: none
-guidance: contract/unique-identifiers
+guidance: contracts/unique-identifiers
 image: /images/unique-identifiers.png
 description: >-
   Providing unique identifiers for API contracts, as well as the APIs that are
@@ -53,7 +49,7 @@ tags:
 rules:
   - apis-json-specification-aid-info
 ```
-## Name
+## Name (contract-metadata-names)
 Providing a clear, descriptive, and concise name for each API contract, as well as the APIs it contains, properly defining the scope.
 
 ```
@@ -62,7 +58,7 @@ slug: contract-metadata-names
 scope: Business Contract
 property: name
 type: none
-guidance: contract/names
+guidance: contracts/names
 image: /images/names.png
 description: >-
   Providing a clear, descriptive, and concise name for each API contract, as
@@ -73,7 +69,7 @@ tags:
 rules:
   - apis-json-name-info
 ```
-## Descriptions
+## Descriptions (contract-metadata-descriptions)
 Providing a robust description of the API contract, as well as each API it contains, providing my context for stakeholders of the contract.
 
 ```
@@ -82,7 +78,7 @@ slug: contract-metadata-descriptions
 scope: Business Contract
 property: description
 type: none
-guidance: contract/descriptions
+guidance: contracts/descriptions
 image: /images/descriptions.png
 description: >-
   Providing a robust description of the API contract, as well as each API it
@@ -93,7 +89,7 @@ tags:
 rules:
   - apis-json-description-info
 ```
-## Images
+## Images (contract-metadata-images)
 Including images as part of the metadata for your APIs helps make APIs more visible as part of portals, documentation, and other resources.
 
 ```
@@ -102,7 +98,7 @@ slug: contract-metadata-images
 scope: Business Contract
 property: image
 type: none
-guidance: contract/images
+guidance: contracts/images
 image: /images/images.png
 description: >-
   Including images as part of the metadata for your APIs helps make APIs more
@@ -113,7 +109,7 @@ tags:
 rules:
   - apis-json-image-info
 ```
-## Tags
+## Tags (contract-metadata-tags)
 Tags provide a bounded context for your APIs, providing keywords that help organize APIs by domains, and  make them more discoverable.
 
 ```
@@ -122,7 +118,7 @@ slug: contract-metadata-tags
 scope: Business Contract
 property: tags
 type: none
-guidance: contract/tags
+guidance: contracts/tags
 image: /images/tags.png
 description: >-
   Tags provide a bounded context for your APIs, providing keywords that help
@@ -135,8 +131,8 @@ rules:
   - apis-json-tags-upper-case-error
   - apis-json-tags-upper-case-info
 ```
-## API Metadata
-Unique identifier, name, description, tags, and other metadata for the API that defines the purpose of the API API, and how it benefits API producer and consumers, establishing the base of the agreement.
+## API Metadata (api-metadata)
+Unique identifier, name, description, tags, and other metadata for the API that defines the purpose of each individual API, and how it benefits API producer and consumers, establishing the base of the agreement.
 
 ```
 name: API Metadata
@@ -144,12 +140,12 @@ slug: api-metadata
 scope: Business Contract
 property: none
 type: none
-guidance: api/metadata
+guidance: apis/metadata
 image: /images/meta-data.png
 description: >-
   Unique identifier, name, description, tags, and other metadata for the API
-  that defines the purpose of the API API, and how it benefits API producer and
-  consumers, establishing the base of the agreement.
+  that defines the purpose of each individual API, and how it benefits API
+  producer and consumers, establishing the base of the agreement.
 policies:
   - api-metadata-unique-identifiers
   - api-metadata-names
@@ -166,8 +162,8 @@ solutions:
   - Discovery
   - Onboarding
 ```
-## Unique Identifiers
-Providing unique identifiers for API apis, as well as the APIs that are indexed as part of a api, providing a key reference.
+## Unique Identifiers (api-metadata-unique-identifiers)
+Providing unique identifiers for API apis, as well as the APIs that are indexed as part of an API, providing a key reference for discovery and automating around a contract.
 
 ```
 name: Unique Identifiers
@@ -175,11 +171,12 @@ slug: api-metadata-unique-identifiers
 scope: Business Contract
 property: aid
 type: none
-guidance: api/unique-identifiers
+guidance: apis/unique-identifiers
 image: /images/unique-identifiers.png
 description: >-
   Providing unique identifiers for API apis, as well as the APIs that are
-  indexed as part of a api, providing a key reference.
+  indexed as part of an API, providing a key reference for discovery and
+  automating around a contract.
 tags:
   - APIs
   - Discovery
@@ -187,8 +184,8 @@ rules:
   - apis-json-apis-aid-error
   - apis-json-apis-aid-info
 ```
-## Name
-Providing a clear, descriptive, and concise name for each API api, as well as the APIs it contains, properly defining the scope.
+## Name (api-metadata-names)
+Providing a clear, descriptive, and concise name for each API, as well as the APIs it contains, properly defining the scope, with an intuitive first impression of an API.
 
 ```
 name: Name
@@ -196,19 +193,20 @@ slug: api-metadata-names
 scope: Business Contract
 property: name
 type: none
-guidance: api/names
+guidance: apis/names
 image: /images/names.png
 description: >-
-  Providing a clear, descriptive, and concise name for each API api, as well as
-  the APIs it contains, properly defining the scope.
+  Providing a clear, descriptive, and concise name for each API, as well as the
+  APIs it contains, properly defining the scope, with an intuitive first
+  impression of an API.
 tags:
   - APIs
   - Discovery
 rules:
   - apis-json-apis-name-info
 ```
-## Descriptions
-Providing a robust description of the API api, as well as each API it contains, providing my context for stakeholders of the api.
+## Descriptions (api-metadata-descriptions)
+Providing a robust description of each API, providing the right amount of information for consumers to understand what is possible and what the business use case is.
 
 ```
 name: Descriptions
@@ -216,18 +214,19 @@ slug: api-metadata-descriptions
 scope: Business Contract
 property: description
 type: none
-guidance: api/descriptions
+guidance: apis/descriptions
 image: /images/descriptions.png
 description: >-
-  Providing a robust description of the API api, as well as each API it
-  contains, providing my context for stakeholders of the api.
+  Providing a robust description of each API, providing the right amount of
+  information for consumers to understand what is possible and what the business
+  use case is.
 tags:
   - APIs
   - Discovery
 rules:
   - apis-json-apis-description-info
 ```
-## Images
+## Images (api-metadata-images)
 Including images as part of the metadata for your APIs helps make APIs more visible as part of portals, documentation, and other resources.
 
 ```
@@ -236,7 +235,7 @@ slug: api-metadata-images
 scope: Business Contract
 property: image
 type: none
-guidance: api/images
+guidance: apis/images
 image: /images/images.png
 description: >-
   Including images as part of the metadata for your APIs helps make APIs more
@@ -247,7 +246,7 @@ tags:
 rules:
   - apis-json-apis-image-info
 ```
-## Tags
+## Tags (api-metadata-tags)
 Tags provide a bounded context for your APIs, providing keywords that help organize APIs by domains, and  make them more discoverable.
 
 ```
@@ -256,7 +255,7 @@ slug: api-metadata-tags
 scope: Business Contract
 property: tags
 type: none
-guidance: api/tags
+guidance: apis/tags
 image: /images/tags.png
 description: >-
   Tags provide a bounded context for your APIs, providing keywords that help
@@ -269,7 +268,30 @@ rules:
   - apis-json-apis-tags-upper-case-error
   - apis-json-apis-tags-upper-case-info
 ```
-## Human URL
+## API Contract URL (apis-json-url-info)
+Providing the valid URL for the APIs.json contract, identifying the source of the contract which may or may not be where it is found, helping make contract authoritative.
+
+```
+name: API Contract URL
+slug: apis-json-url-info
+scope: Business Contract
+property: url
+type: none
+guidance: apis/apis-json-url
+image: /images/url.png
+description: >-
+  Providing the valid URL for the APIs.json contract, identifying the source of
+  the contract which may or may not be where it is found, helping make contract
+  authoritative.
+tags:
+  - URLs
+solutions:
+  - Onboarding
+  - Access
+rules:
+  - apis-json-url-info
+```
+## Human URL (human-url)
 Providing a valid URL to a landing page for the API that is designed for humans to use when learning more about an API.
 
 ```
@@ -291,7 +313,7 @@ solutions:
 rules:
   - apis-json-apis-humanURL-info
 ```
-## Base URL
+## Base URL (base-url)
 Providing a valid URL to the base for an API that is designed for machines to use when making call to an API by an consumer.
 
 ```
@@ -314,7 +336,7 @@ rules:
   - apis-json-apis-baseURL-error
   - apis-json-apis-baseURL-info
 ```
-## GitHub Repository
+## GitHub Repository (github-repository)
 A GitHub repository for an API, providing the single source of truth for the API contract, OpenAPI, and other artifacts, as well as the road map, change log, support, feedback, and other elements of a repository.
 
 ```
@@ -343,7 +365,7 @@ solutions:
 rules:
   - apis-json-apis-properties-github-repository-info
 ```
-## Teams
+## Teams (source-of-truth-teams)
 Require that API contract management is controlled using Git teams.
 
 ```
@@ -358,7 +380,7 @@ description: Require that API contract management is controlled using Git teams.
 tags:
   - Teams
 ```
-## Issues
+## Issues (source-of-truth-issues)
 Leveraging issues as a way to communicate API change and feedback.
 
 ```
@@ -373,7 +395,7 @@ description: Leveraging issues as a way to communicate API change and feedback.
 tags:
   - Issues
 ```
-## Pull Requests
+## Pull Requests (source-of-truth-pull-requests)
 Using pull requests to submit changes to business or technical artifacts.
 
 ```
@@ -389,7 +411,7 @@ tags:
   - Pull Requests
   - Commits
 ```
-## GitHub Actions
+## GitHub Actions (source-of-truth-actions)
 Employing actions as a pipeline to make sure that the deliver of each API is a repeatable process.
 
 ```
@@ -409,7 +431,7 @@ tags:
 rules:
   - apis-json-apis-properties-github-action-info
 ```
-## README
+## README (source-of-truth-readme)
 Require that each API contract repository has a dedicated README.
 
 ```
@@ -424,7 +446,7 @@ description: Require that each API contract repository has a dedicated README.
 tags:
   - README
 ```
-## Use Cases
+## Use Cases (use-cases)
 The who, what, how, and why of producing an API, making sure all of the known use cases are accurately described and kept up to date, then used to ensure each API is delivering what is expected with each use case.
 
 ```
@@ -457,7 +479,7 @@ solutions:
 rules:
   - apis-json-apis-properties-use-cases-info
 ```
-## Who
+## Who (who)
 Who is using an API, focusing on the people who will be putting an API to work in their applications.
 
 ```
@@ -476,7 +498,7 @@ tags:
   - 3rd-Party
   - Producers
 ```
-## What
+## What (what)
 What will consumers be building with the resources and capabilities being made available via APIs.
 
 ```
@@ -495,7 +517,7 @@ tags:
   - 3rd-Party
   - Producers
 ```
-## How
+## How (how)
 How will consumers be putting API resources and capabilities, getting into the details of programming languages and frameworks.
 
 ```
@@ -514,7 +536,7 @@ tags:
   - 3rd-Party
   - Producers
 ```
-## Why
+## Why (why)
 What are the reasons an API consumer will be putting APIs to work in their applications and integrations as part of their business.
 
 ```
@@ -533,7 +555,7 @@ tags:
   - 3rd-Party
   - Producers
 ```
-## Documentation
+## Documentation (documentation)
 The human-readable HTML, Markdown, or PDF representation of the technical surface area of each API, providing path, methods, summaries, description, examples, and the other resources consumers will need.
 
 ```
@@ -562,7 +584,7 @@ solutions:
 rules:
   - apis-json-apis-properties-documentation-info
 ```
-## Paths
+## Paths (documentation-paths)
 Providing simple, clean, and intuitive paths as part of the documentation being published for consumers to use.
 
 ```
@@ -581,7 +603,7 @@ tags:
   - 3rd-Party
   - Producers
 ```
-## Request Bodies
+## Request Bodies (documentation-request-bodies)
 Including details and examples regarding the request bodies being submitted for POST, PUT, and other possible methods.
 
 ```
@@ -600,7 +622,7 @@ tags:
   - 3rd-Party
   - Producers
 ```
-## Responses
+## Responses (documentation-responses)
 Making sure there is a complete example for each API response in documentation, including happy and unhappy responses.
 
 ```
@@ -619,7 +641,7 @@ tags:
   - 3rd-Party
   - Producers
 ```
-## Schema
+## Schema (documentation-schema)
 Documenting all of the schema which are used as part of request bodies and responses, providing JSON SChema representations of each.
 
 ```
@@ -638,7 +660,7 @@ tags:
   - 3rd-Party
   - Producers
 ```
-## Examples
+## Examples (documentation-examples)
 Providing examples of request and responses, with as many variations as possible, helping demonstrate wide usage of an API.
 
 ```
@@ -657,7 +679,7 @@ tags:
   - 3rd-Party
   - Producers
 ```
-## OpenAPI
+## OpenAPI (openapi)
 A machine-readable OpenAPI using the most recent version of the API specification, describing the surface area of each API, which is then used to render the human-readable documentation, and other supporting elements.
 
 ```
@@ -687,7 +709,7 @@ solutions:
 rules:
   - apis-json-apis-properties-openapi-info
 ```
-## OpenAPI Version
+## OpenAPI Version (openapi-version)
 Requiring there is the latest version of OpenAPI available.
 
 ```
@@ -700,7 +722,7 @@ tags:
   - 3rd-Party
   - Producers
 ```
-## Title
+## Title (openapi-info-title)
 Requiring the info title property meets the policy standards.
 
 ```
@@ -719,7 +741,7 @@ rules:
   - openapi-info-title-upper-case-error
   - openapi-info-title-upper-case-info
 ```
-## Description
+## Description (openapi-info-description)
 Requiring the info description property meets the policy standards.
 
 ```
@@ -736,7 +758,7 @@ rules:
   - openapi-info-description-info
   - openapi-info-description-length-error
 ```
-## Contact
+## Contact (openapi-info-contact)
 Requiring that there is a contact included in the OpenAPI info.
 
 ```
@@ -758,7 +780,7 @@ rules:
   - openapi-info-contact-url-error
   - openapi-info-contact-url-info
 ```
-## License
+## License (openapi-info-license)
 Requiring the info license property meets the policy standards.
 
 ```
@@ -782,7 +804,7 @@ rules:
   - openapi-info-license-url-error
   - openapi-info-license-url-info
 ```
-## Terms of Service
+## Terms of Service (openapi-info-terms-of-service)
 Requiring the info terms of service property meets the policy standards.
 
 ```
@@ -798,7 +820,7 @@ rules:
   - openapi-info-terms-of-service-error
   - openapi-info-terms-of-service-info
 ```
-## Version
+## Version (openapi-info-version)
 Requiring the info version property meets the policy standards.
 
 ```
@@ -816,7 +838,7 @@ rules:
   - openapi-version-date-info
   - openapi-version-semantic-info
 ```
-## Path Names
+## Path Names (openapi-path-names)
 Requiring API paths meets the policy standards that are set.
 
 ```
@@ -836,7 +858,7 @@ rules:
   - openapi-version-in-path-error
   - openapi-version-in-path-info
 ```
-## Operation Summary
+## Operation Summary (openapi-operation-summary)
 Requiring that all operational summaries meets the policy standards.
 
 ```
@@ -855,7 +877,7 @@ rules:
   - openapi-operations-summary-period-none-error
   - openapi-operations-summary-period-none-info
 ```
-## Operation Description
+## Operation Description (openapi-operation-description)
 Requiring that all operational descriptions meets the policy standards.
 
 ```
@@ -872,7 +894,7 @@ rules:
   - openapi-operations-description-info
   - openapi-operations-description-length-error
 ```
-## Operation Ids
+## Operation Ids (openapi-operation-identifiers)
 Requiring that all operational unique identifiers meets the policy standards.
 
 ```
@@ -890,7 +912,7 @@ rules:
   - openapi-operations-operation-ids-camel-case-error
   - openapi-operations-operation-ids-camel-case-info
 ```
-## Operation Tags
+## Operation Tags (openapi-operation-tags)
 Requiring that all operational tags meets the policy standards.
 
 ```
@@ -909,7 +931,7 @@ rules:
   - openapi-operations-tags-upper-case-error
   - openapi-operations-tags-upper-case-info
 ```
-## Operation Security
+## Operation Security (openapi-operation-security)
 Requiring that all operational security meets the policy standards.
 
 ```
@@ -925,7 +947,7 @@ rules:
   - openapi-operation-security-definitions-error
   - openapi-operation-security-definitions-info
 ```
-## Request Bodies
+## Request Bodies (openapi-operation-request-bodies)
 Requiring that all operational request bodies meets the policy standards.
 
 ```
@@ -951,7 +973,7 @@ rules:
   - openapi-request-body-content-on-put-error
   - openapi-request-body-content-on-put-info
 ```
-## Request Bodies Media Types
+## Request Bodies Media Types (openapi-operation-request-bodies-meda-types)
 Requiring that all operational request body media types meets the policy standards.
 
 ```
@@ -969,7 +991,7 @@ rules:
   - openapi-request-body-have-application-json-info
   - openapi-request-body-have-application-x-www-form-url-encoded-info
 ```
-## Request Bodies Schema
+## Request Bodies Schema (openapi-operation-request-bodies-schema)
 Requiring that all operational request body schema meets the policy standards.
 
 ```
@@ -993,7 +1015,7 @@ rules:
   - openapi-response-put-204-no-body-error
   - openapi-response-delete-204-no-body-error
 ```
-## Request Bodies Examples
+## Request Bodies Examples (openapi-operation-request-bodies-examples)
 Requiring that all operational request body examples meets the policy standards.
 
 ```
@@ -1013,7 +1035,7 @@ rules:
   - openapi-request-body-have-examples-ref-error
   - openapi-request-body-have-examples-ref-info
 ```
-## Parameters
+## Parameters (openapi-operation-parameters)
 Requiring that all operational parameters meets the policy standards.
 
 ```
@@ -1029,7 +1051,7 @@ rules:
   - openapi-parameters-componentized-error
   - openapi-parameters-componentized-info
 ```
-## Parameter In
+## Parameter In (openapi-operation-parameter-in)
 Requiring that all operational parameters in property meets the policy standards.
 
 ```
@@ -1047,7 +1069,7 @@ rules:
   - openapi-components-parameters-in-error
   - openapi-components-parameters-in-info
 ```
-## Parameter Names
+## Parameter Names (openapi-operation-parameter-names)
 Requiring that all operational parameters names meets the policy standards.
 
 ```
@@ -1066,7 +1088,7 @@ rules:
   - openapi-components-parameters-casing-camel-warn
   - openapi-components-parameters-casing-camel-info
 ```
-## Parameter Descriptions
+## Parameter Descriptions (openapi-operation-parameter-descriptions)
 Requiring that all operational parameters descriptions meets the policy standards.
 
 ```
@@ -1085,7 +1107,7 @@ rules:
   - openapi-components-parameters-description-info
   - openapi-components-parameters-description-length-error
 ```
-## Parameter Type
+## Parameter Type (openapi-operation-parameter-types)
 Requiring that all operational parameters type property meets the policy standards.
 
 ```
@@ -1115,7 +1137,7 @@ rules:
   - openapi-schema-properties-string-minlength-error
   - openapi-schema-properties-string-minlength-info
 ```
-## Parameter Schema
+## Parameter Schema (openapi-operation-parameter-schema)
 Requiring that all operational parameters schema meets the policy standards.
 
 ```
@@ -1133,7 +1155,7 @@ rules:
   - openapi-components-parameters-schema-ref-error
   - openapi-components-parameters-schema-ref-info
 ```
-## Parameter Enumerators
+## Parameter Enumerators (openapi-operation-parameter-enum)
 Requiring that all operational parameters enums meets the policy standards.
 
 ```
@@ -1150,7 +1172,7 @@ rules:
   - openapi-components-parameters-enum-casing-info
   - openapi-components-parameters-enum-info
 ```
-## Response 2xx
+## Response 2xx (openapi-operation-response-2xx)
 Requiring that all 2xx responses meets the policy standards.
 
 ```
@@ -1180,7 +1202,7 @@ rules:
   - openapi-response-delete-204-status-code-error
   - openapi-response-delete-204-status-code-info
 ```
-## Response 2xx Media Type
+## Response 2xx Media Type (openapi-operation-response-2xx-media-types)
 Requiring that all 2xx response media types meets the policy standards.
 
 ```
@@ -1198,7 +1220,7 @@ rules:
   - openapi-response-post-201-media-type-error
   - openapi-response-post-201-media-type-info
 ```
-## Response 2xx Schema
+## Response 2xx Schema (openapi-operation-response-2xx-schema)
 Requiring that all 2xx responses schema meets the policy standards.
 
 ```
@@ -1220,7 +1242,7 @@ rules:
   - openapi-response-post-201-schema-ref-error
   - openapi-response-post-201-schema-ref-info
 ```
-## Response 2xx Examples
+## Response 2xx Examples (openapi-operation-response-2xx-examples)
 Requiring that all 2xx response examples meets the policy standards.
 
 ```
@@ -1242,7 +1264,7 @@ rules:
   - openapi-response-post-201-examples-ref-error
   - openapi-response-post-201-examples-ref-info
 ```
-## Response 4xx
+## Response 4xx (openapi-operation-response-4xx)
 Requiring that all 4xx responses meets the policy standards.
 
 ```
@@ -1298,7 +1320,7 @@ rules:
   - openapi-response-delete-500-status-code-error
   - openapi-response-delete-500-status-code-info
 ```
-## Response 4xx Schema
+## Response 4xx Schema (openapi-operation-response-4xx-schema)
 Requiring that all 4xx response schema meets the policy standards.
 
 ```
@@ -1354,7 +1376,7 @@ rules:
   - openapi-response-delete-500-schema-ref-error
   - openapi-response-delete-500-schema-ref-info
 ```
-## Response 5xx
+## Response 5xx (openapi-operation-response-5xx)
 Requiring that all 5xx responses meets the policy standards.
 
 ```
@@ -1374,7 +1396,7 @@ rules:
   - openapi-response-put-500-status-code-error
   - openapi-response-put-500-status-code-info
 ```
-## Response 5xx Schema
+## Response 5xx Schema (openapi-operation-response-5xx-schema)
 Requiring that all 5xx response schema meets the policy standards.
 
 ```
@@ -1394,7 +1416,7 @@ rules:
   - openapi-response-put-500-schema-ref-error
   - openapi-response-put-500-schema-ref-info
 ```
-## Schema Type
+## Schema Type (openapi-schema-type)
 Requiring that all schema type meets the policy standards.
 
 ```
@@ -1410,7 +1432,7 @@ rules:
   - openapi-schema-type-error
   - openapi-schema-type-info
 ```
-## Schema Names
+## Schema Names (openapi-schema-names)
 Requiring that all schema names meets the policy standards.
 
 ```
@@ -1427,7 +1449,7 @@ rules:
   - openapi-schema-names-pascal-case-info
   - openapi-schema-names-length-error
 ```
-## Schema Descriptions
+## Schema Descriptions (openapi-schema-descriptions)
 Requiring that all schema descriptions meets the policy standards.
 
 ```
@@ -1444,7 +1466,7 @@ rules:
   - openapi-schema-description-info
   - openapi-schema-description-length-error
 ```
-## Schema Properties
+## Schema Properties (openapi-schema-properties)
 Requiring that all schema properties meets the policy standards.
 
 ```
@@ -1460,7 +1482,7 @@ rules:
   - openapi-schema-properties-error
   - openapi-schema-properties-info
 ```
-## Schema Property Names
+## Schema Property Names (openapi-schema-property-names)
 Requiring that all schema property names meets the policy standards.
 
 ```
@@ -1477,7 +1499,7 @@ rules:
   - openapi-schema-properties-names-camel-case-info
   - openapi-schema-properties-names-length-error
 ```
-## Schema Property Descriptions
+## Schema Property Descriptions (openapi-schema-property-descriptions)
 Requiring that all schema property descriptions meets the policy standards.
 
 ```
@@ -1494,7 +1516,7 @@ rules:
   - openapi-schema-properties-descriptions-info
   - openapi-schema-properties-descriptions-length-error
 ```
-## Schema Property Type
+## Schema Property Type (openapi-schema-property-types)
 Requiring that all schema property types meets the policy standards.
 
 ```
@@ -1512,7 +1534,7 @@ rules:
   - openapi-schema-properties-allowed-integer-format-error
   - openapi-schema-properties-allowed-number-format-error
 ```
-## Schema Property Shapes
+## Schema Property Shapes (openapi-schema-property-shapes)
 Requiring that all schema property shapes meets the policy standards.
 
 ```
@@ -1538,7 +1560,7 @@ rules:
   - openapi-schema-properties-define-number-maximum-error
   - openapi-schema-properties-define-number-minimum-error
 ```
-## OpenAPI External Docs
+## OpenAPI External Docs (openapi-external-docs)
 Requiring that all OpenAPI external documentation meet the policy standards.
 
 ```
@@ -1554,7 +1576,7 @@ rules:
   - openapi-external-docs-error
   - openapi-external-docs-info
 ```
-## OpenAPI Tags
+## OpenAPI Tags (openapi-tags)
 Requiring that all OpenAPI tags meet the policy standards.
 
 ```
@@ -1576,7 +1598,7 @@ rules:
   - openapi-tags-one-error
   - openapi-tags-upper-case-error
 ```
-## OpenAPI Security
+## OpenAPI Security (openapi-security)
 Requiring that OpenAPI security meet the policy standards.
 
 ```
@@ -1592,7 +1614,7 @@ rules:
   - openapi-security-schemes-error
   - openapi-security-schemes-info
 ```
-## OpenAPI Component Headers
+## OpenAPI Component Headers (openapi-component-headers)
 Requiring that OpenAPI components headers meet the policy standards.
 
 ```
@@ -1610,7 +1632,7 @@ rules:
   - openapi-components-headers-retry-after-error
   - openapi-components-headers-retry-after-info
 ```
-## OpenAPI Components
+## OpenAPI Components (openapi-components)
 Requiring that OpenAPI components meet the policy standards.
 
 ```
@@ -1623,6 +1645,7 @@ tags:
   - 3rd-Party
   - Producers
 rules:
+  - apis-json-common-info
   - openapi-components-parameters-error
   - openapi-components-parameters-info
   - openapi-components-examples-error
@@ -1632,7 +1655,7 @@ rules:
   - openapi-components-headers-error
   - openapi-components-headers-info
 ```
-## Problem Details for HTTP APIs
+## Problem Details for HTTP APIs (problem-details-for-http-apis)
 Requiring that errors use the Problem Details for HTTP APIs standard.
 
 ```
@@ -1662,7 +1685,7 @@ rules:
   - openapi-components-responses-unauthorized-error
   - openapi-components-responses-unauthorized-info
 ```
-## Postman Collection
+## Postman Collection (postman-collection)
 A machine-readable Postman Collection describing the surface area of the API contract or providing more modular and executable representations of portions of the API contract. - Postman - Executable
 
 ```
@@ -1688,7 +1711,7 @@ solutions:
 rules:
   - apis-json-apis-properties-postman-collection-info
 ```
-## Getting Started
+## Getting Started (getting-started)
 The step by step walk-through for new API consumers, ensuring they have exactly what is needed to discover and onboard, but also help make sure the getting started steps are as simple, plain language, and easy to follow.
 
 ```
@@ -1715,7 +1738,7 @@ solutions:
 rules:
   - apis-json-apis-properties-getting-started-info
 ```
-## Documentation
+## Documentation (getting-started-documentation)
 Provide a link and description to your API documentation, providing the entry point for API consumers to begin learning about what your API does.
 
 ```
@@ -1730,7 +1753,7 @@ tags:
   - 3rd-Party
   - Producers
 ```
-## Authentication
+## Authentication (getting-started-authentication)
 Needs description.
 
 ```
@@ -1743,7 +1766,7 @@ tags:
   - 3rd-Party
   - Producers
 ```
-## SDKs
+## SDKs (getting-started-sdks)
 Provide a link and description of where API consumers can learn more about authentication and how it will work when they use an API.
 
 ```
@@ -1758,7 +1781,7 @@ tags:
   - 3rd-Party
   - Producers
 ```
-## Login
+## Login (login)
 Providing a way to login and gain access to an API, offering a simple human-readable URL to the login page, or ideally some sort of automated login process that allows access with as few clicks and steps as possible.
 
 ```
@@ -1779,7 +1802,7 @@ solutions:
   - Onboarding
   - Access
 ```
-## Plans
+## Plans (plans)
 Plans are all about being explicit and transparent with all of the access for an API, breaking down the tiers, rate limits, features, and pricing that is available for API consumers, standardizing the business of APIs.
 
 ```
@@ -1808,7 +1831,7 @@ solutions:
 rules:
   - apis-json-apis-properties-plans-info
 ```
-## Metrics
+## Metrics (plan-metrics)
 Providing details regarding the metrics available for each plan, outlining how the usage of digital resources and capabilities are being measured.
 
 ```
@@ -1823,7 +1846,7 @@ tags:
   - 3rd-Party
   - Producers
 ```
-## Rate Limits
+## Rate Limits (plan-rate-limits)
 Providing details of rate limits being applied as part of each plan, and what is available to consumers as part of their application usage.
 
 ```
@@ -1838,7 +1861,7 @@ tags:
   - 3rd-Party
   - Producers
 ```
-## Time Frame
+## Time Frame (plan-time-frame)
 Break down usage for for consumers based upon second, minutes, days, weeks, months, or other relevant time-frame for them to understand their usage.
 
 ```
@@ -1853,7 +1876,7 @@ tags:
   - 3rd-Party
   - Producers
 ```
-## Regions
+## Regions (plan-regions)
 Providing regional details available for access API resources and capabilities in different geographical regions as part of API plan usage.
 
 ```
@@ -1868,7 +1891,7 @@ tags:
   - 3rd-Party
   - Producers
 ```
-## Elements
+## Elements (plan-elements)
 Offering other elements or features of an API that are included or not included within a plan to help API consumers understand scope of what is available.
 
 ```
@@ -1884,7 +1907,7 @@ tags:
   - 3rd-Party
   - Producers
 ```
-## Authentication
+## Authentication (authentication)
 Distilling down the authentication required for an API, outlining API keys required, JWT, OAuth, and other authentication types, providing details on how to obtain accounts, tokens, and anything needed for accessing APIs.
 
 ```
@@ -1916,7 +1939,7 @@ solutions:
 rules:
   - apis-json-apis-properties-authentication-info
 ```
-## Keys
+## Keys (authentication-keys)
 Require the API key usage meets standards set by authentication policies.
 
 ```
@@ -1929,7 +1952,7 @@ tags:
   - 3rd-Party
   - Producers
 ```
-## JWT
+## JWT (authentication-jwt)
 Require JWT usage meets standards set by authentication policies.
 
 ```
@@ -1942,7 +1965,7 @@ tags:
   - 3rd-Party
   - Producers
 ```
-## OAuth
+## OAuth (authentication-oauth)
 Require that OAuth usage meets standards set by authentication policies.
 
 ```
@@ -1955,7 +1978,7 @@ tags:
   - 3rd-Party
   - Producers
 ```
-## Scopes
+## Scopes (authentication-scopes)
 Require Oauth scopes meets standards set by authentication policies.
 
 ```
@@ -1967,7 +1990,63 @@ tags:
   - Properties
   - 3rd-Party
 ```
-## Road Map
+## Created Date (apis-json-created-info)
+Providing the data in which an API contract was created, establishing the inception of a specific contract involving one or more APIs, which defines the age of the contract.
+
+```
+name: Created Date
+slug: apis-json-created-info
+scope: Business Contract
+property: created
+type: none
+guidance: change/created
+image: /images/created.png
+description: >-
+  Providing the data in which an API contract was created, establishing the
+  inception of a specific contract involving one or more APIs, which defines the
+  age of the contract.
+tags:
+  - Dates
+  - Change
+solutions:
+  - Alignment
+  - Change
+  - Communication
+  - Consistency
+  - Quality
+  - Reliability
+rules:
+  - apis-json-created-info
+```
+## Modified Date (apis-json-modified-info)
+Providing the data in which an API contract was last modified, tracking the change that occurs with each API contract, understanding the velocity as well as stagnation of APIs.
+
+```
+name: Modified Date
+slug: apis-json-modified-info
+scope: Business Contract
+property: modified
+type: none
+guidance: change/modified
+image: /images/modified.png
+description: >-
+  Providing the data in which an API contract was last modified, tracking the
+  change that occurs with each API contract, understanding the velocity as well
+  as stagnation of APIs.
+tags:
+  - Dates
+  - Change
+solutions:
+  - Alignment
+  - Change
+  - Communication
+  - Consistency
+  - Quality
+  - Reliability
+rules:
+  - apis-json-modified-info
+```
+## Road Map (road-map)
 Providing a simple yet informative look at what features are being planned for future releases of an API, or even sharing that nothing is currently being planned--just providing any insight on what the future will hold.
 
 ```
@@ -1996,7 +2075,7 @@ solutions:
 rules:
   - apis-json-apis-properties-road-map-info
 ```
-## Date
+## Date (road-map-date)
 The date for the proposed API change in the road map.
 
 ```
@@ -2008,7 +2087,7 @@ tags:
   - Properties
   - 3rd-Party
 ```
-## Title
+## Title (road-map-title)
 The title for the proposed API change in the road map.
 
 ```
@@ -2020,7 +2099,7 @@ tags:
   - Properties
   - 3rd-Party
 ```
-## Details
+## Details (road-map-details)
 The description for the proposed API change in the road map.
 
 ```
@@ -2032,7 +2111,7 @@ tags:
   - Properties
   - 3rd-Party
 ```
-## Version
+## Version (road-map-version)
 The version of the proposed API change in the road map.
 
 ```
@@ -2044,7 +2123,7 @@ tags:
   - Properties
   - 3rd-Party
 ```
-## Versioning
+## Versioning (versioning)
 Providing semantic or date-based versioning for an API, offering an overview of what is adopted for an API and why, letting consumers know that their is change management in place and how they can tune into communication.
 
 ```
@@ -2073,7 +2152,7 @@ solutions:
   - Quality
   - Reliability
 ```
-## Semantic Versioning
+## Semantic Versioning (versioning-semantic-versioning)
 Require usage of major, minor, and patch Semantic Versioning for managing change.
 
 ```
@@ -2087,7 +2166,7 @@ tags:
   - Properties
   - 3rd-Party
 ```
-## Date-Based Versioning
+## Date-Based Versioning (versioning-date-base)
 Require usage of date-base versioning for managing change.
 
 ```
@@ -2099,7 +2178,7 @@ tags:
   - Properties
   - 3rd-Party
 ```
-## Change Log
+## Change Log (change-log)
 Having a change log of anything added, updated, or removed for an API, but also for the other operational and supporting resources for each API, ensuring there is a easy to read manifest of what has happened for an API.
 
 ```
@@ -2128,7 +2207,7 @@ solutions:
 rules:
   - apis-json-apis-properties-change-log-info
 ```
-## Date
+## Date (change-log-date)
 The date of the change that was made to an API.
 
 ```
@@ -2140,7 +2219,7 @@ tags:
   - Properties
   - 3rd-Party
 ```
-## Title
+## Title (change-log-title)
 The title of the change that was made to an API.
 
 ```
@@ -2152,7 +2231,7 @@ tags:
   - Properties
   - 3rd-Party
 ```
-## Details
+## Details (change-log-details)
 The description of the change that was made to an API.
 
 ```
@@ -2164,7 +2243,7 @@ tags:
   - Properties
   - 3rd-Party
 ```
-## Version
+## Version (change-log-version)
 The version of the change that was made to an API.
 
 ```
@@ -2176,7 +2255,7 @@ tags:
   - Properties
   - 3rd-Party
 ```
-## SDKs
+## SDKs (sdks)
 Offering software development kits, or SDKs for an API, handling authentication, and working across all available API operations in a variety of relevant programming languages to the targeted consumers of an API.
 
 ```
@@ -2205,7 +2284,7 @@ solutions:
 rules:
   - apis-json-apis-properties-sdk-info
 ```
-## JavaScript
+## JavaScript (sdks-javascript)
 Require a JavaScript client SDK available with each API.
 
 ```
@@ -2220,7 +2299,7 @@ tags:
 rules:
   - apis-json-apis-properties-sdk-node-info
 ```
-## PHP
+## PHP (sdks-php)
 Require a PHP client SDK available with each API.
 
 ```
@@ -2233,7 +2312,7 @@ tags:
   - 3rd-Party
   - Producers
 ```
-## Java
+## Java (sdks-java)
 Require a Java client SDK available with each API.
 
 ```
@@ -2248,7 +2327,7 @@ tags:
 rules:
   - apis-json-apis-properties-sdk-java-info
 ```
-## Go
+## Go (sdks-go)
 Require a Go client SDK available with each API.
 
 ```
@@ -2263,7 +2342,7 @@ tags:
 rules:
   - apis-json-apis-properties-sdk-go-info
 ```
-## CSharp
+## CSharp (sdks-csharp)
 Require a CSharp client SDK available with each API.
 
 ```
@@ -2276,7 +2355,7 @@ tags:
   - 3rd-Party
   - Producers
 ```
-## Status
+## Status (status)
 Making an API status page, monitoring reports, or other real-time updates regarding the uptime and availability of an API, providing current, but also the historical status of API, helping maintain trust with API consumers.
 
 ```
@@ -2303,7 +2382,7 @@ solutions:
 rules:
   - apis-json-apis-properties-status-info
 ```
-## Status Dashboard
+## Status Dashboard (status-dashboard)
 Require a link to as well as results from a status dashboard for an API.
 
 ```
@@ -2314,7 +2393,7 @@ description: Require a link to as well as results from a status dashboard for an
 tags:
   - Testing
 ```
-## Status History
+## Status History (status-history)
 Require a link to as well as results from a status history for an API.
 
 ```
@@ -2325,7 +2404,7 @@ description: Require a link to as well as results from a status history for an A
 tags:
   - Testing
 ```
-## Performance
+## Performance (performance)
 Publishing details regarding the performance of APIs, complimenting status and uptime information, but drilling into more detail regarding speed, latency, and other performance related metrics that matter to API consumers.
 
 ```
@@ -2350,7 +2429,7 @@ solutions:
 rules:
   - apis-json-apis-properties-performance-info
 ```
-## Latency
+## Latency (performance-latency)
 Requiring details regarding the regular latency for each available API.
 
 ```
@@ -2361,7 +2440,7 @@ description: Requiring details regarding the regular latency for each available 
 tags:
   - Testing
 ```
-## Response Time
+## Response Time (performance-response-time)
 Requiring details regarding the regular response time for each available API.
 
 ```
@@ -2372,7 +2451,7 @@ description: Requiring details regarding the regular response time for each avai
 tags:
   - Testing
 ```
-## Security
+## Security (security)
 Providing an overview of security practices for an API, including details covered as part of authentication and access management, but also security testing and certifications that matter to API consumers.
 
 ```
@@ -2397,7 +2476,7 @@ solutions:
 rules:
   - apis-json-apis-properties-security-info
 ```
-## Authentication
+## Authentication (security-authentication)
 Require details regarding how authentication is handled as part of API security.
 
 ```
@@ -2412,7 +2491,7 @@ tags:
   - 3rd-Party
   - Producers
 ```
-## OWASP
+## OWASP (security-owasp-top-10)
 Require that OWASP API security top ten has been applied as part of API security.
 
 ```
@@ -2427,7 +2506,7 @@ tags:
   - 3rd-Party
   - Producers
 ```
-## Testing
+## Testing (security-testing)
 Require that security testing has occurred and publishing results for API security.
 
 ```
@@ -2442,7 +2521,7 @@ tags:
   - 3rd-Party
   - Producers
 ```
-## Support
+## Support (support)
 Outline what support is available for API consumers, including email, tickets, forums, and paid support services, making it easy for API consumers to understand how they can get the help they need across APIs.
 
 ```
@@ -2476,7 +2555,7 @@ solutions:
 rules:
   - apis-json-apis-properties-support-support-info
 ```
-## Support Email
+## Support Email (support-email)
 Require that an API is supported using email.
 
 ```
@@ -2491,7 +2570,7 @@ tags:
 rules:
   - apis-json-apis-properties-support-email-info
 ```
-## Support Issues
+## Support Issues (support-issues)
 Require that an API is supported using Git issues.
 
 ```
@@ -2506,7 +2585,7 @@ tags:
 rules:
   - apis-json-apis-properties-support-issues-info
 ```
-## Feedback
+## Feedback (feedback)
 Providing feedback on the business and technical details of each API contract, helping facilitate feedback from consumers and other stakeholders, but also from the learnings across other private and public API contracts in use.
 
 ```
@@ -2524,7 +2603,7 @@ tags:
   - 3rd-Party
   - Producers
 ```
-## Feedback Issues
+## Feedback Issues (feedback-issues)
 Allow for teams to receive feedback on API contracts via Git issue.
 
 ```
@@ -2539,7 +2618,7 @@ tags:
 rules:
   - apis-json-apis-properties-feedback-issues-info
 ```
-## Questions
+## Questions (questions)
 Empowering teams to ask questions via issue or discussion via Git repository, or directly via email about the API lifecycle, governance, as well as the business or technical elements of producing an API for wider consumption.
 
 ```
@@ -2557,7 +2636,7 @@ tags:
   - 3rd-Party
   - Producers
 ```
-## Questions Issues
+## Questions Issues (questions-issues)
 Allow for teams to ask questions and get answers via Git Issues.
 
 ```
@@ -2572,7 +2651,7 @@ tags:
 rules:
   - apis-json-apis-properties-questions-issues-info
 ```
-## Terms of Service
+## Terms of Service (terms-of-service)
 Making sure that terms of service are front and center for API consumers, ensuring that the legal side of using API resources and capabilities in applications and integrations by 3rd party consumers is covered.
 
 ```
@@ -2595,7 +2674,7 @@ solutions:
 rules:
   - apis-json-apis-properties-terms-of-service-info
 ```
-## Privacy Policy
+## Privacy Policy (privacy-policy)
 Publishing a privacy policy covering the producer and consumers of an API, as well as end-users of applications, adding to the legal resources that are available to 3rd party developers when putting APIs to work.
 
 ```
@@ -2620,7 +2699,7 @@ solutions:
 rules:
   - apis-json-apis-properties-privacy-policy-info
 ```
-## Licensing
+## Licensing (licensing)
 Publishing a license for the interface, client code, server code, and data to ensure consumers understand the legal implications of using the API, code, and data into their own applications and integrations.
 
 ```
@@ -2645,7 +2724,7 @@ solutions:
 rules:
   - apis-json-apis-properties-license-info
 ```
-## Guidance
+## Guidance (guidance)
 Ensuring there is Just-in-Time API Guidance (TM) available throughout the life of an API contract, providing links to technological, business, and more policy focused guidance that helps teams producing API through their journey.
 
 ```
@@ -2666,7 +2745,7 @@ tags:
   - 3rd-Party
   - Producers
 ```
-## Technical
+## Technical (guidance-technical)
 Provide access to technical API guidance as part of API contract support.
 
 ```
@@ -2679,7 +2758,7 @@ tags:
   - 3rd-Party
   - Producers
 ```
-## Business
+## Business (guidance-business)
 Provide access to business API guidance as part of API contract support.
 
 ```
@@ -2692,7 +2771,7 @@ tags:
   - 3rd-Party
   - Producers
 ```
-## policies
+## policies (guidance-policies)
 Provide access to API policy guidance as part of API contract support.
 
 ```
@@ -2705,7 +2784,7 @@ tags:
   - 3rd-Party
   - Producers
 ```
-## people
+## people (guidance-people)
 Provide access to people API guidance as part of API contract support.
 
 ```
@@ -2718,7 +2797,7 @@ tags:
   - 3rd-Party
   - Producers
 ```
-## Provenance
+## Provenance (provenance)
 Helping curate the provenance of each API contract as it evolves over time, documenting change, and cataloging the reviews, validation, certification, and conversation that occurs as each API moves forward and matures over time.
 
 ```
@@ -2739,7 +2818,7 @@ tags:
   - 3rd-Party
   - Producers
 ```
-## Issues
+## Issues (provenance-issues)
 Provide the provenance of an API contract using Git issues.
 
 ```
@@ -2752,7 +2831,7 @@ tags:
   - 3rd-Party
   - Producers
 ```
-## Pull Requests
+## Pull Requests (provenance-pull-requests)
 Provide the provenance of an API contract using Git pull requests.
 
 ```
@@ -2765,7 +2844,7 @@ tags:
   - 3rd-Party
   - Producers
 ```
-## Reviews
+## Reviews (provenance-reviews)
 Provide the provenance of an API contract using API governance reviews.
 
 ```
@@ -2778,7 +2857,7 @@ tags:
   - 3rd-Party
   - Producers
 ```
-## Certifications
+## Certifications (provenance-certifications)
 Provide the provenance of an API contract using regular certifications
 
 ```
@@ -2791,7 +2870,7 @@ tags:
   - 3rd-Party
   - Producers
 ```
-## Policies
+## Policies (policies)
 Providing the machine-readable policies that link machine-readable rules with the business reasons why we are governing an API and the operations around it, helping organize rules based upon the business reasoning behind them.
 
 ```
@@ -2811,7 +2890,7 @@ tags:
 rules:
   - apis-json-apis-properties-policies-info
 ```
-## Rules
+## Rules (rules)
 Providing the machine-readable rules used to govern an API that can be used as part of pipelines or other automation to lint an API, making sure the baseline for each API and the operations around it are available as part of the contract.
 
 ```
@@ -2830,7 +2909,7 @@ tags:
   - 3rd-Party
   - Producers
 ```
-## Guidance
+## Guidance (guidance)
 Ensuring there is guidance for teams throughout their API journey, providing simple text and video guidance for all of the topics business and engineering teams will encounter as part of their regular work to produce consistent APis.
 
 ```
@@ -2850,7 +2929,7 @@ tags:
 rules:
   - apis-json-apis-properties-rules-info
 ```
-## GitHub Organization
+## GitHub Organization (github-organization)
 A GitHub organization provides a dedicated workspaces for teams to produce APIs, organize all the API contracts in motion, and leverage source countrol, CI/CD, teams, and other resources provided by GitHub to manage API operations.
 
 ```
@@ -2879,7 +2958,7 @@ solutions:
 rules:
   - apis-json-apis-properties-github-organization-info
 ```
-## Teams
+## Teams (github-organization-teams)
 GitHub organizations allow for the management of people and teams to help define who has access to repositories, contracts, and other assets managed via this dedicated domain workspace.
 
 ```
@@ -2897,7 +2976,7 @@ description: >-
 tags:
   - Teams
 ```
-## Repositories
+## Repositories (github-organization-repositories)
 GitHub organizations provide teams with the ability to create repositories for managing API contracts, separating and organizing contracts by meaningful bounded contexts within a specific domain.
 
 ```
@@ -2915,7 +2994,7 @@ description: >-
 tags:
   - Teams
 ```
-## README
+## README (github-organization-readme)
 GitHub organization provide the ability to have a dedicated README, providing a single landing page for the API workspace of a domain, line of business, or domain, where all API contracts can be found and searched.
 
 ```
@@ -2933,7 +3012,7 @@ description: >-
 tags:
   - README
 ```
-## Postman Workspace
+## Postman Workspace (postman-workspace)
 A Postman Workspace provides a dedicated space to manage API contracts within a domain, complimenting other types of workspaces, allowing for private, partner, and public workspaces to exist for managing API operations.
 
 ```
@@ -2962,7 +3041,7 @@ solutions:
 rules:
   - apis-json-apis-properties-postman-public-workspace-info
 ```
-## Blogs
+## Blogs (blogs)
 A blog helps provide a regular channel for publishing relevant stories and information for both producers and consumers of an API, providing a simple, informative, and recurring way to stay in engaged and receive regular updates about an API.
 
 ```
@@ -2993,7 +3072,7 @@ solutions:
 rules:
   - apis-json-apis-properties-blog-feed-info
 ```
-## Blog Feeds
+## Blog Feeds (blog-feeds)
 A blog RSS or Atom feed provides a simple way to syndicate information and updates about APIs with producers and consumers, allowing it to be pushed out to where they are located and regularly consuming information, without having to visit a blog.
 
 ```
@@ -3024,7 +3103,7 @@ solutions:
 rules:
   - apis-json-apis-properties-blog-feed-info
 ```
-## Videos
+## Videos (videos)
 Videos offer an engaging way to provide information and updates with producers nad consumers of APIs, demonstrating how an API can be used, providing webinars, workshops, and other useful videos about what is happening with an API.
 
 ```
@@ -3055,7 +3134,7 @@ solutions:
 rules:
   - apis-json-apis-properties-video-info
 ```
-## Governance
+## Governance (governance)
 Governance standardizes APIs across teams using a common platform and lifecycle, applying governance policies and rules, and keeping everyone moving in the same direction using common guidance.
 
 ```
@@ -3094,7 +3173,7 @@ solutions:
   - Self-Service
   - Simplicity
 ```
-## Policies
+## Policies (governance-policies)
 Human and machine-readable policies that define an aspect of API operations, which are always kept in alignment with business objectives.
 
 ```
@@ -3109,7 +3188,7 @@ tags:
 rules:
   - apis-json-apis-properties-policies-info
 ```
-## Operational Rules
+## Operational Rules (governance-operational-rules)
 Spectral rules that apply to the operational level, linting APIs.json.
 
 ```
@@ -3122,7 +3201,7 @@ tags:
 rules:
   - apis-json-apis-properties-apis-json-rules-info
 ```
-## API Rules
+## API Rules (governance-api-rules)
 Spectral rules that apply to the API level, linting OpenAPI.
 
 ```
@@ -3135,7 +3214,7 @@ tags:
 rules:
   - apis-json-apis-properties-openapi-rules-info
 ```
-## Lifecycle
+## Lifecycle (governance-lifecycle)
 A human and machine-readable schema of the common and agreed upon API lifecycle.
 
 ```
@@ -3150,7 +3229,7 @@ tags:
 rules:
   - apis-json-apis-properties-lifecycle-info
 ```
-## Vocabulary
+## Vocabulary (governance-vocabulary)
 A formal vocabulary of words and phrases that can and cannot be used across operations.
 
 ```
@@ -3165,7 +3244,7 @@ tags:
 rules:
   - apis-json-apis-properties-vocabulary-info
 ```
-## Standards
+## Standards (standards)
 Internet, industry, market, and government standards help make APIs more consistent, but also save time and money for both producer and consumer, while keeping APIs better aligned with existing industry areas of interoperability and reuse.
 
 ```
@@ -3206,7 +3285,7 @@ solutions:
   - Self-Service
   - Simplicity
 ```
-## HTTP
+## HTTP (standards-http)
 The Hyper Text Transfer Protocol (HTTP) from the IETF.
 
 ```
@@ -3217,7 +3296,7 @@ description: The Hyper Text Transfer Protocol (HTTP) from the IETF.
 tags:
   - Standards
 ```
-## JSON
+## JSON (standards-json)
 Using the JavaScript Object Notation (JSON) format.
 
 ```
@@ -3228,7 +3307,7 @@ description: Using the JavaScript Object Notation (JSON) format.
 tags:
   - Standards
 ```
-## YAML
+## YAML (standards-yaml)
 Using the Yet Another Markdown Language (YAML) format.
 
 ```
@@ -3239,7 +3318,7 @@ description: Using the Yet Another Markdown Language (YAML) format.
 tags:
   - Standards
 ```
-## OpenAPI
+## OpenAPI (standards-openapi)
 Using the OpenAPI specification to describe HTTP APIs.
 
 ```
@@ -3251,7 +3330,7 @@ tags:
   - Standards
   - Linux Foundation
 ```
-## JSON Schema
+## JSON Schema (standards-json-schema)
 Using the JSON Schema to define and validate models.
 
 ```
@@ -3263,7 +3342,7 @@ tags:
   - Standards
   - Validation
 ```
-## Spectral
+## Spectral (standards-spectral)
 Using the Spectral to define linting rules for APIs.
 
 ```
@@ -3276,7 +3355,7 @@ tags:
   - Linting
   - RUles
 ```
-## Problem Details for HTTP APIs
+## Problem Details for HTTP APIs (problem-details-for-http-apis)
 Using the  Problem Details for HTTP APIs standard for errors.
 
 ```
@@ -3288,7 +3367,7 @@ tags:
   - Standards
   - Errors
 ```
-## Portals
+## Portals (portals)
 Dedicated developer portals for an API provide a way to make documentation, sign-up, getting started, plans, SDKs, and other resources API consumers need more easily accessible publicly or privately to a specific audience.
 
 ```
@@ -3315,7 +3394,7 @@ solutions:
 rules:
   - apis-json-apis-properties-portal-info
 ```
-## Teams
+## Teams (teams)
 Requiring at least one product and one engineering, as well as other potential stakeholders involved through the API lifecycle from define to production, ensuring there is always someone actively owning and leading APIs forward.
 
 ```
