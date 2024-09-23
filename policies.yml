@@ -560,7 +560,7 @@
   slug: openapi-info-license
   scope: Technical Contract
   property: none
-  type: none  
+  type: InterfaceLicense  
   guidance: openapi/info-license    
   image: /images/licenses.png
   description: Requiring the info license property meets the policy standards. 
@@ -583,7 +583,7 @@
   slug: openapi-info-terms-of-service
   scope: Technical Contract
   property: none
-  type: none  
+  type: TermsOfService
   guidance: openapi/info-terms-of-service    
   image: /images/terms-of-service.png
   description: Requiring the info terms of service property meets the policy standards.
@@ -598,7 +598,7 @@
   slug: openapi-info-version
   scope: Technical Contract
   property: none
-  type: none  
+  type: Versioning  
   guidance: openapi/info-version    
   image: /images/versions.png
   description: Requiring the info version property meets the policy standards.
@@ -1617,7 +1617,7 @@
   property: created
   type: none  
   guidance: change/created
-  image: /images/created.png
+  image: /images/created-date.png
   description: Providing the data in which an API contract was created, establishing the inception of a specific contract involving one or more APIs, which defines the age of the contract. 
   tags:
     - Dates
@@ -1637,7 +1637,7 @@
   property: modified
   type: none  
   guidance: change/modified
-  image: /images/modified.png
+  image: /images/modified-date.png
   description: Providing the data in which an API contract was last modified, tracking the change that occurs with each API contract, understanding the velocity as well as stagnation of APIs.
   tags:
     - Dates
@@ -1988,6 +1988,8 @@
     - apis-json-apis-properties-support-support-info   
 - name: Support Email
   slug: support-email
+  property: none
+  type: SupportEmail  
   image: /images/email.png
   description: Require that an API is supported using email.
   tags:
@@ -1998,6 +2000,8 @@
     - apis-json-apis-properties-support-email-info
 - name: Support Issues
   slug: support-issues
+  property: none
+  type: SupportGitHubIssues   
   image: /images/issues.png
   description: Require that an API is supported using Git issues.
   tags:
@@ -2009,6 +2013,8 @@
 
 - name: Feedback
   slug: feedback
+  property: none
+  type: Support   
   image: /images/feedback.png
   description: Providing feedback on the business and technical details of each API contract, helping facilitate feedback from consumers and other stakeholders, but also from the learnings across other private and public API contracts in use.
   policies:
@@ -2019,6 +2025,8 @@
     - Producers 
 - name: Feedback Issues
   slug: feedback-issues
+  property: none
+  type: FeedbackGitHubIssues   
   image: /images/issues.png
   description: Allow for teams to receive feedback on API contracts via Git issue.
   tags:
@@ -2030,6 +2038,8 @@
 
 - name: Questions
   slug: questions
+  property: none
+  type: Questions   
   image: /images/questions.png
   description: Empowering teams to ask questions via issue or discussion via Git repository, or directly via email about the API lifecycle, governance, as well as the business or technical elements of producing an API for wider consumption. 
   policies:
@@ -2040,6 +2050,8 @@
     - Producers    
 - name: Questions Issues
   slug: questions-issues
+  property: none
+  type: QuestionsGitHubIssues   
   image: /images/issues.png
   description: Allow for teams to ask questions and get answers via Git Issues.
   tags:
@@ -2051,6 +2063,8 @@
 
 - name: Terms of Service
   slug: terms-of-service
+  property: none
+  type: TermsOfService     
   image: /images/terms-of-service.png
   description: Making sure that terms of service are front and center for API consumers, ensuring that the legal side of using API resources and capabilities in applications and integrations by 3rd party consumers is covered.
   policies:
@@ -2067,6 +2081,8 @@
     
 - name: Privacy Policy
   slug: privacy-policy
+  property: none
+  type: PrivacyPolicy     
   image: /images/privacy-policy.png
   description: Publishing a privacy policy covering the producer and consumers of an API, as well as end-users of applications, adding to the legal resources that are available to 3rd party developers when putting APIs to work. 
   policies:
@@ -2085,6 +2101,8 @@
 
 - name: Licensing
   slug: licensing
+  property: none
+  type: InterfaceLicense     
   image: /images/licenses.png
   description: Publishing a license for the interface, client code, server code, and data to ensure consumers understand the legal implications of using the API, code, and data into their own applications and integrations.
   policies:
@@ -2103,6 +2121,8 @@
 
 - name: Guidance
   slug: guidance
+  property: none
+  type: Guidance    
   image: /images/guidance.png
   description: Ensuring there is Just-in-Time API Guidance (TM) available throughout the life of an API contract, providing links to technological, business, and more policy focused guidance that helps teams producing API through their journey.
   policies:
@@ -2116,6 +2136,8 @@
     - Producers   
 - name: Technical
   slug: guidance-technical
+  property: none
+  type: TechnicalGuidance    
   image: /images/technical.png
   description: Provide access to technical API guidance as part of API contract support.
   tags:
@@ -2124,22 +2146,28 @@
     - Producers  
 - name: Business
   slug: guidance-business
+  property: none
+  type: BusinessGuidance    
   image: /images/business.png
   description: Provide access to business API guidance as part of API contract support.
   tags:
     - Policies
     - 3rd-Party
     - Producers   
-- name: policies
+- name: Policies
   slug: guidance-policies
+  property: none
+  type: GuidancePolicies    
   image: /images/policies.png
   description: Provide access to API policy guidance as part of API contract support.
   tags:
     - Policies
     - 3rd-Party
     - Producers  
-- name: people
+- name: People
   slug: guidance-people
+  property: none
+  type: GuidancePeople    
   image: /images/people.png
   description: Provide access to people API guidance as part of API contract support.
   tags:
@@ -2149,6 +2177,8 @@
 
 - name: Provenance
   slug: provenance
+  property: none
+  type: Provenance    
   image: /images/provenance.png
   description: Helping curate the provenance of each API contract as it evolves over time, documenting change, and cataloging the reviews, validation, certification, and conversation that occurs as each API moves forward and matures over time.  
   policies:
@@ -2196,6 +2226,8 @@
 
 - name: Policies
   slug: policies
+  property: none
+  type: Policies    
   image: /images/policies.png
   description: Providing the machine-readable policies that link machine-readable rules with the business reasons why we are governing an API and the operations around it, helping organize rules based upon the business reasoning behind them.
   policies:
@@ -2209,6 +2241,8 @@
 
 - name: Rules
   slug: rules
+  property: none
+  type: Rules    
   image: /images/rules.png
   description: Providing the machine-readable rules used to govern an API that can be used as part of pipelines or other automation to lint an API, making sure the baseline for each API and the operations around it are available as part of the contract.
   policies:
@@ -2220,6 +2254,8 @@
 
 - name: Guidance
   slug: guidance
+  property: none
+  type: Guidance    
   image: /images/guidance.png
   description: Ensuring there is guidance for teams throughout their API journey, providing simple text and video guidance for all of the topics business and engineering teams will encounter as part of their regular work to produce consistent APis.
   policies:
@@ -2381,7 +2417,7 @@
   slug: governance
   scope: Business Contract
   property: none
-  type: none  
+  type: Governance  
   guidance: governance/overview   
   image: /images/governance.png
   description: Governance standardizes APIs across teams using a common platform and lifecycle, applying governance policies and rules, and keeping everyone moving in the same direction using common guidance.
@@ -2410,6 +2446,8 @@
     - Simplicity     
 - name: Policies
   slug: governance-policies
+  property: none
+  type: Policies    
   image: /images/policies.png
   description: Human and machine-readable policies that define an aspect of API operations, which are always kept in alignment with business objectives.
   tags:
@@ -2418,6 +2456,8 @@
     - apis-json-apis-properties-policies-info     
 - name: Operational Rules
   slug: governance-operational-rules
+  property: none
+  type: OperationalRules    
   image: /images/rules.png
   description: Spectral rules that apply to the operational level, linting APIs.json.
   tags:
@@ -2426,6 +2466,8 @@
     - apis-json-apis-properties-apis-json-rules-info    
 - name: API Rules
   slug: governance-api-rules
+  property: none
+  type: APIRules    
   image: /images/rules.png
   description: Spectral rules that apply to the API level, linting OpenAPI.
   tags:
@@ -2434,6 +2476,8 @@
     - apis-json-apis-properties-openapi-rules-info        
 - name: Lifecycle
   slug: governance-lifecycle
+  property: none
+  type: Lifecycle    
   image: /images/lifecycle.png
   description: A human and machine-readable schema of the common and agreed upon API lifecycle.
   tags:
@@ -2442,6 +2486,8 @@
     - apis-json-apis-properties-lifecycle-info       
 - name: Vocabulary
   slug: governance-vocabulary
+  property: none
+  type: Vocabulary    
   image: /images/lifecycle.png
   description: A formal vocabulary of words and phrases that can and cannot be used across operations.
   tags:
