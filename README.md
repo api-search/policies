@@ -277,7 +277,7 @@ slug: apis-json-url-info
 scope: Business Contract
 property: url
 type: none
-guidance: apis/apis-json-url
+guidance: contracts/apis-json-url
 image: /images/url.png
 description: >-
   Providing the valid URL for the APIs.json contract, identifying the source of
@@ -420,7 +420,7 @@ slug: source-of-truth-actions
 scope: Business Contract
 property: none
 type: GitHubActions
-guidance: repositories/actions
+guidance: repositories/github-actions
 image: /images/actions.png
 description: >-
   Employing actions as a pipeline to make sure that the deliver of each API is a
@@ -571,9 +571,7 @@ description: >-
   surface area of each API, providing path, methods, summaries, description,
   examples, and the other resources consumers will need.
 tags:
-  - Policies
-  - 3rd-Party
-  - Producers
+  - Documentation
 solutions:
   - Alignment
   - Communication
@@ -687,7 +685,7 @@ name: OpenAPI
 slug: openapi
 scope: Technical Contract
 property: none
-type: none
+type: OpenAPI
 guidance: contracts/openapi
 image: /images/openapi.png
 description: >-
@@ -715,6 +713,10 @@ Requiring there is the latest version of OpenAPI available.
 ```
 name: OpenAPI Version
 slug: openapi-version
+scope: Technical Contract
+property: none
+type: none
+guidance: openapi/versions
 image: /images/versions.png
 description: Requiring there is the latest version of OpenAPI available.
 tags:
@@ -728,6 +730,10 @@ Requiring the info title property meets the policy standards.
 ```
 name: Title
 slug: openapi-info-title
+scope: Technical Contract
+property: none
+type: none
+guidance: openapi/info-title
 image: /images/names.png
 description: Requiring the info title property meets the policy standards.
 tags:
@@ -747,6 +753,10 @@ Requiring the info description property meets the policy standards.
 ```
 name: Description
 slug: openapi-info-description
+scope: Technical Contract
+property: none
+type: none
+guidance: openapi/info-description
 image: /images/descriptions.png
 description: Requiring the info description property meets the policy standards.
 tags:
@@ -765,6 +775,10 @@ Requiring that there is a contact included in the OpenAPI info.
 name: Contact
 slug: openapi-info-contact
 image: /images/contacts.png
+scope: Technical Contract
+property: none
+type: none
+guidance: openapi/info-contact
 description: Requiring that there is a contact included in the OpenAPI info.
 tags:
   - Policies
@@ -786,6 +800,10 @@ Requiring the info license property meets the policy standards.
 ```
 name: License
 slug: openapi-info-license
+scope: Technical Contract
+property: none
+type: none
+guidance: openapi/info-license
 image: /images/licenses.png
 description: Requiring the info license property meets the policy standards.
 tags:
@@ -810,6 +828,10 @@ Requiring the info terms of service property meets the policy standards.
 ```
 name: Terms of Service
 slug: openapi-info-terms-of-service
+scope: Technical Contract
+property: none
+type: none
+guidance: openapi/info-terms-of-service
 image: /images/terms-of-service.png
 description: Requiring the info terms of service property meets the policy standards.
 tags:
@@ -826,6 +848,10 @@ Requiring the info version property meets the policy standards.
 ```
 name: Version
 slug: openapi-info-version
+scope: Technical Contract
+property: none
+type: none
+guidance: openapi/info-version
 image: /images/versions.png
 description: Requiring the info version property meets the policy standards.
 tags:
@@ -844,6 +870,10 @@ Requiring API paths meets the policy standards that are set.
 ```
 name: Path Names
 slug: openapi-path-names
+scope: Technical Contract
+property: none
+type: none
+guidance: openapi/paths
 image: /images/names.png
 description: Requiring API paths meets the policy standards that are set.
 tags:
@@ -864,6 +894,10 @@ Requiring that all operational summaries meets the policy standards.
 ```
 name: Operation Summary
 slug: openapi-operation-summary
+scope: Technical Contract
+property: none
+type: none
+guidance: openapi/operation-summary
 image: /images/summaries.png
 description: Requiring that all operational summaries meets the policy standards.
 tags:
@@ -883,6 +917,10 @@ Requiring that all operational descriptions meets the policy standards.
 ```
 name: Operation Description
 slug: openapi-operation-description
+scope: Technical Contract
+property: none
+type: none
+guidance: openapi/operation-description
 image: /images/descriptions.png
 description: Requiring that all operational descriptions meets the policy standards.
 tags:
@@ -900,6 +938,10 @@ Requiring that all operational unique identifiers meets the policy standards.
 ```
 name: Operation Ids
 slug: openapi-operation-identifiers
+scope: Technical Contract
+property: none
+type: none
+guidance: openapi/operation-identifiers
 image: /images/unique-identifiers.png
 description: Requiring that all operational unique identifiers meets the policy standards.
 tags:
@@ -918,6 +960,10 @@ Requiring that all operational tags meets the policy standards.
 ```
 name: Operation Tags
 slug: openapi-operation-tags
+scope: Technical Contract
+property: none
+type: none
+guidance: openapi/operation-tags
 image: /images/tags.png
 description: Requiring that all operational tags meets the policy standards.
 tags:
@@ -937,6 +983,10 @@ Requiring that all operational security meets the policy standards.
 ```
 name: Operation Security
 slug: openapi-operation-security
+scope: Technical Contract
+property: none
+type: none
+guidance: openapi/operation-security
 image: /images/security.png
 description: Requiring that all operational security meets the policy standards.
 tags:
@@ -953,6 +1003,10 @@ Requiring that all operational request bodies meets the policy standards.
 ```
 name: Request Bodies
 slug: openapi-operation-request-bodies
+scope: Technical Contract
+property: none
+type: none
+guidance: openapi/operation-request-bodies
 image: /images/request-bodies.png
 description: Requiring that all operational request bodies meets the policy standards.
 tags:
@@ -973,12 +1027,16 @@ rules:
   - openapi-request-body-content-on-put-error
   - openapi-request-body-content-on-put-info
 ```
-## Request Bodies Media Types (openapi-operation-request-bodies-meda-types)
+## Request Bodies Media Types (openapi-operation-request-bodies-media-types)
 Requiring that all operational request body media types meets the policy standards.
 
 ```
 name: Request Bodies Media Types
-slug: openapi-operation-request-bodies-meda-types
+slug: openapi-operation-request-bodies-media-types
+scope: Technical Contract
+property: none
+type: none
+guidance: openapi/operation-request-bodies-media-type
 image: /images/media-types.png
 description: >-
   Requiring that all operational request body media types meets the policy
@@ -997,6 +1055,10 @@ Requiring that all operational request body schema meets the policy standards.
 ```
 name: Request Bodies Schema
 slug: openapi-operation-request-bodies-schema
+scope: Technical Contract
+property: none
+type: none
+guidance: openapi/operation-request-bodies-schema
 image: /images/schema.png
 description: Requiring that all operational request body schema meets the policy standards.
 tags:
@@ -1021,6 +1083,10 @@ Requiring that all operational request body examples meets the policy standards.
 ```
 name: Request Bodies Examples
 slug: openapi-operation-request-bodies-examples
+scope: Technical Contract
+property: none
+type: none
+guidance: openapi/operation-request-bodies-examples
 image: /images/examples.png
 description: >-
   Requiring that all operational request body examples meets the policy
@@ -1041,6 +1107,10 @@ Requiring that all operational parameters meets the policy standards.
 ```
 name: Parameters
 slug: openapi-operation-parameters
+scope: Technical Contract
+property: none
+type: none
+guidance: openapi/operation-parameters
 image: /images/parameters.png
 description: Requiring that all operational parameters meets the policy standards.
 tags:
@@ -1057,6 +1127,10 @@ Requiring that all operational parameters in property meets the policy standards
 ```
 name: Parameter In
 slug: openapi-operation-parameter-in
+scope: Technical Contract
+property: none
+type: none
+guidance: openapi/operation-parameter-in
 image: /images/parameters.png
 description: >-
   Requiring that all operational parameters in property meets the policy
@@ -1075,6 +1149,10 @@ Requiring that all operational parameters names meets the policy standards.
 ```
 name: Parameter Names
 slug: openapi-operation-parameter-names
+scope: Technical Contract
+property: none
+type: none
+guidance: openapi/operation-parameter-names
 image: /images/parameter-names.png
 description: Requiring that all operational parameters names meets the policy standards.
 tags:
@@ -1094,6 +1172,10 @@ Requiring that all operational parameters descriptions meets the policy standard
 ```
 name: Parameter Descriptions
 slug: openapi-operation-parameter-descriptions
+scope: Technical Contract
+property: none
+type: none
+guidance: openapi/operation-parameter-description
 image: /images/parameter-descriptions.png
 description: >-
   Requiring that all operational parameters descriptions meets the policy
@@ -1113,6 +1195,10 @@ Requiring that all operational parameters type property meets the policy standar
 ```
 name: Parameter Type
 slug: openapi-operation-parameter-types
+scope: Technical Contract
+property: none
+type: none
+guidance: openapi/operation-parameter-types
 image: /images/types.png
 description: >-
   Requiring that all operational parameters type property meets the policy
@@ -1143,6 +1229,10 @@ Requiring that all operational parameters schema meets the policy standards.
 ```
 name: Parameter Schema
 slug: openapi-operation-parameter-schema
+scope: Technical Contract
+property: none
+type: none
+guidance: openapi/operation-parameter-schema
 image: /images/schema.png
 description: Requiring that all operational parameters schema meets the policy standards.
 tags:
@@ -1161,6 +1251,10 @@ Requiring that all operational parameters enums meets the policy standards.
 ```
 name: Parameter Enumerators
 slug: openapi-operation-parameter-enum
+scope: Technical Contract
+property: none
+type: none
+guidance: openapi/operation-parameter-enum
 image: /images/enumerators.png
 description: Requiring that all operational parameters enums meets the policy standards.
 tags:
@@ -1178,6 +1272,10 @@ Requiring that all 2xx responses meets the policy standards.
 ```
 name: Response 2xx
 slug: openapi-operation-response-2xx
+scope: Technical Contract
+property: none
+type: none
+guidance: openapi/operation-response-2xx
 image: /images/check.png
 description: Requiring that all 2xx responses meets the policy standards.
 tags:
@@ -1208,6 +1306,10 @@ Requiring that all 2xx response media types meets the policy standards.
 ```
 name: Response 2xx Media Type
 slug: openapi-operation-response-2xx-media-types
+scope: Technical Contract
+property: none
+type: none
+guidance: openapi/operation-response-2xx-media-types
 image: /images/check.png
 description: Requiring that all 2xx response media types meets the policy standards.
 tags:
@@ -1226,6 +1328,10 @@ Requiring that all 2xx responses schema meets the policy standards.
 ```
 name: Response 2xx Schema
 slug: openapi-operation-response-2xx-schema
+scope: Technical Contract
+property: none
+type: none
+guidance: openapi/operation-response-2xx-schema
 image: /images/check.png
 description: Requiring that all 2xx responses schema meets the policy standards.
 tags:
@@ -1248,6 +1354,10 @@ Requiring that all 2xx response examples meets the policy standards.
 ```
 name: Response 2xx Examples
 slug: openapi-operation-response-2xx-examples
+scope: Technical Contract
+property: none
+type: none
+guidance: openapi/operation-response-2xx-examples
 image: /images/check.png
 description: Requiring that all 2xx response examples meets the policy standards.
 tags:
@@ -1270,6 +1380,10 @@ Requiring that all 4xx responses meets the policy standards.
 ```
 name: Response 4xx
 slug: openapi-operation-response-4xx
+scope: Technical Contract
+property: none
+type: none
+guidance: openapi/operation-response-4xx
 image: /images/not-found.png
 description: Requiring that all 4xx responses meets the policy standards.
 tags:
@@ -1326,6 +1440,10 @@ Requiring that all 4xx response schema meets the policy standards.
 ```
 name: Response 4xx Schema
 slug: openapi-operation-response-4xx-schema
+scope: Technical Contract
+property: none
+type: none
+guidance: openapi/operation-response-4xx-schema
 image: /images/not-found.png
 description: Requiring that all 4xx response schema meets the policy standards.
 tags:
@@ -1382,6 +1500,10 @@ Requiring that all 5xx responses meets the policy standards.
 ```
 name: Response 5xx
 slug: openapi-operation-response-5xx
+scope: Technical Contract
+property: none
+type: none
+guidance: openapi/operation-response-5xx
 image: /images/error.png
 description: Requiring that all 5xx responses meets the policy standards.
 tags:
@@ -1402,6 +1524,10 @@ Requiring that all 5xx response schema meets the policy standards.
 ```
 name: Response 5xx Schema
 slug: openapi-operation-response-5xx-schema
+scope: Technical Contract
+property: none
+type: none
+guidance: openapi/operation-response-5xx-schema
 image: /images/error.png
 description: Requiring that all 5xx response schema meets the policy standards.
 tags:
@@ -1422,6 +1548,10 @@ Requiring that all schema type meets the policy standards.
 ```
 name: Schema Type
 slug: openapi-schema-type
+scope: Technical Contract
+property: none
+type: none
+guidance: openapi/schema-type
 image: /images/types.png
 description: Requiring that all schema type meets the policy standards.
 tags:
@@ -1438,6 +1568,10 @@ Requiring that all schema names meets the policy standards.
 ```
 name: Schema Names
 slug: openapi-schema-names
+scope: Technical Contract
+property: none
+type: none
+guidance: openapi/schema-names
 image: /images/names.png
 description: Requiring that all schema names meets the policy standards.
 tags:
@@ -1455,6 +1589,10 @@ Requiring that all schema descriptions meets the policy standards.
 ```
 name: Schema Descriptions
 slug: openapi-schema-descriptions
+scope: Technical Contract
+property: none
+type: none
+guidance: openapi/schema-description
 image: /images/descriptions.png
 description: Requiring that all schema descriptions meets the policy standards.
 tags:
@@ -1472,6 +1610,10 @@ Requiring that all schema properties meets the policy standards.
 ```
 name: Schema Properties
 slug: openapi-schema-properties
+scope: Technical Contract
+property: none
+type: none
+guidance: openapi/schema-properties
 image: /images/properties.png
 description: Requiring that all schema properties meets the policy standards.
 tags:
@@ -1488,6 +1630,10 @@ Requiring that all schema property names meets the policy standards.
 ```
 name: Schema Property Names
 slug: openapi-schema-property-names
+scope: Technical Contract
+property: none
+type: none
+guidance: openapi/schema-property-names
 image: /images/names.png
 description: Requiring that all schema property names meets the policy standards.
 tags:
@@ -1505,6 +1651,10 @@ Requiring that all schema property descriptions meets the policy standards.
 ```
 name: Schema Property Descriptions
 slug: openapi-schema-property-descriptions
+scope: Technical Contract
+property: none
+type: none
+guidance: openapi/schema-property-descriptions
 image: /images/descriptions.png
 description: Requiring that all schema property descriptions meets the policy standards.
 tags:
@@ -1522,6 +1672,10 @@ Requiring that all schema property types meets the policy standards.
 ```
 name: Schema Property Type
 slug: openapi-schema-property-types
+scope: Technical Contract
+property: none
+type: none
+guidance: openapi/schema-property-types
 image: /images/types.png
 description: Requiring that all schema property types meets the policy standards.
 tags:
@@ -1540,6 +1694,10 @@ Requiring that all schema property shapes meets the policy standards.
 ```
 name: Schema Property Shapes
 slug: openapi-schema-property-shapes
+scope: Technical Contract
+property: none
+type: none
+guidance: openapi/schema-property-shapes
 image: /images/shapes.png
 description: Requiring that all schema property shapes meets the policy standards.
 tags:
@@ -1566,6 +1724,10 @@ Requiring that all OpenAPI external documentation meet the policy standards.
 ```
 name: OpenAPI External Docs
 slug: openapi-external-docs
+scope: Technical Contract
+property: none
+type: none
+guidance: openapi/external-docs
 image: /images/documentation.png
 description: Requiring that all OpenAPI external documentation meet the policy standards.
 tags:
@@ -1582,6 +1744,10 @@ Requiring that all OpenAPI tags meet the policy standards.
 ```
 name: OpenAPI Tags
 slug: openapi-tags
+scope: Technical Contract
+property: none
+type: none
+guidance: openapi/tags
 image: /images/tags.png
 description: Requiring that all OpenAPI tags meet the policy standards.
 tags:
@@ -1604,6 +1770,10 @@ Requiring that OpenAPI security meet the policy standards.
 ```
 name: OpenAPI Security
 slug: openapi-security
+scope: Technical Contract
+property: none
+type: none
+guidance: openapi/security
 image: /images/security.png
 description: Requiring that OpenAPI security meet the policy standards.
 tags:
@@ -1620,6 +1790,10 @@ Requiring that OpenAPI components headers meet the policy standards.
 ```
 name: OpenAPI Component Headers
 slug: openapi-component-headers
+scope: Technical Contract
+property: none
+type: none
+guidance: openapi/component-headers
 image: /images/headers.png
 description: Requiring that OpenAPI components headers meet the policy standards.
 tags:
@@ -1638,6 +1812,10 @@ Requiring that OpenAPI components meet the policy standards.
 ```
 name: OpenAPI Components
 slug: openapi-components
+scope: Technical Contract
+property: none
+type: none
+guidance: openapi/components
 image: /images/components.png
 description: Requiring that OpenAPI components meet the policy standards.
 tags:
@@ -1661,6 +1839,10 @@ Requiring that errors use the Problem Details for HTTP APIs standard.
 ```
 name: Problem Details for HTTP APIs
 slug: problem-details-for-http-apis
+scope: Technical Contract
+property: none
+type: none
+guidance: standards/problem-details-for-http-apis
 image: /images/errors.png
 description: Requiring that errors use the Problem Details for HTTP APIs standard.
 tags:
@@ -1693,7 +1875,7 @@ name: Postman Collection
 slug: postman-collection
 scope: Technical Contract
 property: none
-type: none
+type: PostmanCollection
 guidance: contracts/collection
 image: /images/collections.png
 description: >-
@@ -1810,7 +1992,7 @@ name: Plans
 slug: plans
 scope: Business Contract
 property: none
-type: none
+type: Plans
 guidance: onboarding/plans
 image: /images/plans.png
 description: >-
@@ -1915,7 +2097,7 @@ name: Authentication
 slug: authentication
 scope: Business Contract
 property: none
-type: none
+type: Authentication
 guidance: authentication/overview
 image: /images/authentication.png
 description: >-
@@ -2529,7 +2711,7 @@ name: Support
 slug: support
 scope: Business Contract
 property: none
-type: none
+type: Support
 guidance: support/overview
 image: /images/support.png
 description: >-
@@ -3252,7 +3434,7 @@ name: Standards
 slug: standards
 scope: Business Contract
 property: none
-type: none
+type: Standards
 guidance: standards/overview
 image: /images/standards.png
 description: >-
@@ -3267,6 +3449,8 @@ policies:
   - standards-openapi
   - standards-json-schema
   - standards-spectral
+  - problem-details-for-http-apis
+  - json-path
 tags:
   - Standards
 solutions:
@@ -3367,6 +3551,18 @@ tags:
   - Standards
   - Errors
 ```
+## JSON Path (json-path)
+Using JSON Path to identify properties of a schema.
+
+```
+name: JSON Path
+slug: json-path
+image: /images/schema.png
+description: Using JSON Path to identify properties of a schema.
+tags:
+  - Schema
+  - Rules
+```
 ## Portals (portals)
 Dedicated developer portals for an API provide a way to make documentation, sign-up, getting started, plans, SDKs, and other resources API consumers need more easily accessible publicly or privately to a specific audience.
 
@@ -3375,7 +3571,7 @@ name: Portals
 slug: portals
 scope: Business Contract
 property: none
-type: none
+type: Portals
 guidance: portals/overview
 image: /images/portals.png
 description: >-
