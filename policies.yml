@@ -22,7 +22,7 @@
     - Communication    
     - Discovery     
     - Onboarding  
-- name: API Contract Unique Identifiers
+- name: Unique Identifiers
   slug: contract-metadata-unique-identifiers
   scope: Business Contract
   property: aid
@@ -35,7 +35,7 @@
     - Discovery
   rules:
     - apis-json-specification-aid-info  
-- name: API Contract Name
+- name: Name
   slug: contract-metadata-names
   scope: Business Contract
   property: name
@@ -48,7 +48,7 @@
     - Discovery 
   rules:
      - apis-json-name-info 
-- name: API Contract Descriptions
+- name: Descriptions
   slug: contract-metadata-descriptions
   scope: Business Contract
   property: description
@@ -61,7 +61,7 @@
     - Discovery 
   rules:
     - apis-json-description-info
-- name: API Contract Images
+- name: Images
   slug: contract-metadata-images
   scope: Business Contract
   property: image
@@ -74,7 +74,7 @@
     - Discovery 
   rules:
     - apis-json-image-info
-- name: API Contract Tags
+- name: Tags
   slug: contract-metadata-tags
   scope: Business Contract
   property: tags
@@ -93,7 +93,7 @@
 # API Metadata
 - name: API Metadata
   slug: api-metadata
-  scope: Business Contract
+  scope: API Contract
   property: none
   type: none  
   guidance: apis/metadata
@@ -114,9 +114,9 @@
     - Communication    
     - Discovery     
     - Onboarding  
-- name: API Unique Identifiers
+- name: Unique Identifiers
   slug: api-metadata-unique-identifiers
-  scope: Business Contract
+  scope: API Contract
   property: aid
   type: none
   guidance: apis/unique-identifiers
@@ -128,9 +128,9 @@
   rules:
     - apis-json-apis-aid-error
     - apis-json-apis-aid-info   
-- name: API Name
+- name: Name
   slug: api-metadata-names
-  scope: Business Contract
+  scope: API Contract
   property: name
   type: none  
   guidance: apis/names
@@ -141,9 +141,9 @@
     - Discovery  
   rules:
     - apis-json-apis-name-info
-- name: API Description
+- name: Description
   slug: api-metadata-descriptions
-  scope: Business Contract
+  scope: API Contract
   property: description
   type: none  
   guidance: apis/descriptions
@@ -154,9 +154,9 @@
     - Discovery 
   rules:
     - apis-json-apis-description-info
-- name: API Image
+- name: Image
   slug: api-metadata-images
-  scope: Business Contract
+  scope: API Contract
   property: image
   type: none  
   guidance: apis/images
@@ -167,9 +167,9 @@
     - Discovery
   rules:
     - apis-json-apis-image-info 
-- name: API Tag
+- name: Tag
   slug: api-metadata-tags
-  scope: Business Contract
+  scope: API Contract
   property: tags
   type: none  
   guidance: apis/tags
@@ -184,7 +184,7 @@
     - apis-json-apis-tags-upper-case-info    
 
 # URLs
-- name: API Contract URL
+- name: URL
   slug: apis-json-url-info
   scope: Business Contract
   property: url
@@ -200,9 +200,9 @@
   rules:
     - apis-json-url-info
 
-- name: API Human URL
+- name: Human URL
   slug: human-url
-  scope: Business Contract
+  scope: API Contract
   property: humanURL
   type: none
   guidance: apis/human-url
@@ -215,9 +215,9 @@
     - Access 
   rules:
     - apis-json-apis-humanURL-info
-- name: API Base URL
+- name: Base URL
   slug: base-url
-  scope: Business Contract
+  scope: API Contract
   property: baseURL
   type: none  
   guidance: apis/base-url
@@ -1218,15 +1218,15 @@
     - openapi-schema-properties-string-maxlength-error
     - openapi-schema-properties-string-maxlength-info
     - openapi-schema-properties-string-minlength-error
-    - openapi-schema-properties-string-minlength-info 
+    - openapi-schema-properties-string-minlength-info
     - openapi-schema-properties-array-items-error
     - openapi-schema-properties-array-items-info
     - openapi-schema-properties-array-maxitems-error
     - openapi-schema-properties-array-maxitems-info
     - openapi-schema-properties-array-minitems-error
-    - openapi-schema-properties-array-minitems-info  
+    - openapi-schema-properties-array-minitems-info
     - openapi-schema-properties-define-number-maximum-error
-    - openapi-schema-properties-define-number-minimum-error   
+    - openapi-schema-properties-define-number-minimum-error
 - name: OpenAPI External Docs
   slug: openapi-external-docs
   scope: Technical Contract

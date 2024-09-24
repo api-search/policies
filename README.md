@@ -32,11 +32,11 @@ solutions:
   - Discovery
   - Onboarding
 ```
-## API Contract Unique Identifiers (contract-metadata-unique-identifiers)
+## Unique Identifiers (contract-metadata-unique-identifiers)
 Providing unique identifiers for API contracts, as well as the APIs that are indexed as part of a contract, providing a key reference.
 
 ```
-name: API Contract Unique Identifiers
+name: Unique Identifiers
 slug: contract-metadata-unique-identifiers
 scope: Business Contract
 property: aid
@@ -52,11 +52,11 @@ tags:
 rules:
   - apis-json-specification-aid-info
 ```
-## API Contract Name (contract-metadata-names)
+## Name (contract-metadata-names)
 Providing a clear, descriptive, and concise name for each API contract, as well as the APIs it contains, properly defining the scope.
 
 ```
-name: API Contract Name
+name: Name
 slug: contract-metadata-names
 scope: Business Contract
 property: name
@@ -72,11 +72,11 @@ tags:
 rules:
   - apis-json-name-info
 ```
-## API Contract Descriptions (contract-metadata-descriptions)
+## Descriptions (contract-metadata-descriptions)
 Providing a robust description of the API contract, as well as each API it contains, providing my context for stakeholders of the contract.
 
 ```
-name: API Contract Descriptions
+name: Descriptions
 slug: contract-metadata-descriptions
 scope: Business Contract
 property: description
@@ -92,11 +92,11 @@ tags:
 rules:
   - apis-json-description-info
 ```
-## API Contract Images (contract-metadata-images)
+## Images (contract-metadata-images)
 Including images as part of the metadata for your APIs helps make APIs more visible as part of portals, documentation, and other resources.
 
 ```
-name: API Contract Images
+name: Images
 slug: contract-metadata-images
 scope: Business Contract
 property: image
@@ -112,11 +112,11 @@ tags:
 rules:
   - apis-json-image-info
 ```
-## API Contract Tags (contract-metadata-tags)
+## Tags (contract-metadata-tags)
 Tags provide a bounded context for your APIs, providing keywords that help organize APIs by domains, and  make them more discoverable.
 
 ```
-name: API Contract Tags
+name: Tags
 slug: contract-metadata-tags
 scope: Business Contract
 property: tags
@@ -140,7 +140,7 @@ Unique identifier, name, description, tags, and other metadata for the API that 
 ```
 name: API Metadata
 slug: api-metadata
-scope: Business Contract
+scope: API Contract
 property: none
 type: none
 guidance: apis/metadata
@@ -165,13 +165,13 @@ solutions:
   - Discovery
   - Onboarding
 ```
-## API Unique Identifiers (api-metadata-unique-identifiers)
+## Unique Identifiers (api-metadata-unique-identifiers)
 Providing unique identifiers for API apis, as well as the APIs that are indexed as part of an API, providing a key reference for discovery and automating around a contract.
 
 ```
-name: API Unique Identifiers
+name: Unique Identifiers
 slug: api-metadata-unique-identifiers
-scope: Business Contract
+scope: API Contract
 property: aid
 type: none
 guidance: apis/unique-identifiers
@@ -187,13 +187,13 @@ rules:
   - apis-json-apis-aid-error
   - apis-json-apis-aid-info
 ```
-## API Name (api-metadata-names)
+## Name (api-metadata-names)
 Providing a clear, descriptive, and concise name for each API, as well as the APIs it contains, properly defining the scope, with an intuitive first impression of an API.
 
 ```
-name: API Name
+name: Name
 slug: api-metadata-names
-scope: Business Contract
+scope: API Contract
 property: name
 type: none
 guidance: apis/names
@@ -208,13 +208,13 @@ tags:
 rules:
   - apis-json-apis-name-info
 ```
-## API Description (api-metadata-descriptions)
+## Description (api-metadata-descriptions)
 Providing a robust description of each API, providing the right amount of information for consumers to understand what is possible and what the business use case is.
 
 ```
-name: API Description
+name: Description
 slug: api-metadata-descriptions
-scope: Business Contract
+scope: API Contract
 property: description
 type: none
 guidance: apis/descriptions
@@ -229,13 +229,13 @@ tags:
 rules:
   - apis-json-apis-description-info
 ```
-## API Image (api-metadata-images)
+## Image (api-metadata-images)
 Including images as part of the metadata for your APIs helps make APIs more visible as part of portals, documentation, and other resources.
 
 ```
-name: API Image
+name: Image
 slug: api-metadata-images
-scope: Business Contract
+scope: API Contract
 property: image
 type: none
 guidance: apis/images
@@ -249,13 +249,13 @@ tags:
 rules:
   - apis-json-apis-image-info
 ```
-## API Tag (api-metadata-tags)
+## Tag (api-metadata-tags)
 Tags provide a bounded context for your APIs, providing keywords that help organize APIs by domains, and  make them more discoverable.
 
 ```
-name: API Tag
+name: Tag
 slug: api-metadata-tags
-scope: Business Contract
+scope: API Contract
 property: tags
 type: none
 guidance: apis/tags
@@ -271,11 +271,11 @@ rules:
   - apis-json-apis-tags-upper-case-error
   - apis-json-apis-tags-upper-case-info
 ```
-## API Contract URL (apis-json-url-info)
+## URL (apis-json-url-info)
 Providing the valid URL for the APIs.json contract, identifying the source of the contract which may or may not be where it is found, helping make contract authoritative.
 
 ```
-name: API Contract URL
+name: URL
 slug: apis-json-url-info
 scope: Business Contract
 property: url
@@ -294,13 +294,13 @@ solutions:
 rules:
   - apis-json-url-info
 ```
-## API Human URL (human-url)
+## Human URL (human-url)
 Providing a valid URL to a landing page for the API that is designed for humans to use when learning more about an API.
 
 ```
-name: API Human URL
+name: Human URL
 slug: human-url
-scope: Business Contract
+scope: API Contract
 property: humanURL
 type: none
 guidance: apis/human-url
@@ -316,13 +316,13 @@ solutions:
 rules:
   - apis-json-apis-humanURL-info
 ```
-## API Base URL (base-url)
+## Base URL (base-url)
 Providing a valid URL to the base for an API that is designed for machines to use when making call to an API by an consumer.
 
 ```
-name: API Base URL
+name: Base URL
 slug: base-url
-scope: Business Contract
+scope: API Contract
 property: baseURL
 type: none
 guidance: apis/base-url
@@ -805,7 +805,7 @@ name: License
 slug: openapi-info-license
 scope: Technical Contract
 property: none
-type: none
+type: InterfaceLicense
 guidance: openapi/info-license
 image: /images/licenses.png
 description: Requiring the info license property meets the policy standards.
@@ -833,7 +833,7 @@ name: Terms of Service
 slug: openapi-info-terms-of-service
 scope: Technical Contract
 property: none
-type: none
+type: TermsOfService
 guidance: openapi/info-terms-of-service
 image: /images/terms-of-service.png
 description: Requiring the info terms of service property meets the policy standards.
@@ -853,7 +853,7 @@ name: Version
 slug: openapi-info-version
 scope: Technical Contract
 property: none
-type: none
+type: Versioning
 guidance: openapi/info-version
 image: /images/versions.png
 description: Requiring the info version property meets the policy standards.
@@ -1292,90 +1292,36 @@ rules:
   - openapi-response-get-200-description-info
   - openapi-response-get-200-content-error
   - openapi-response-get-200-content-info
+  - openapi-response-get-200-media-type-error
+  - openapi-response-get-200-media-type-info
+  - openapi-response-get-200-media-type-schema-error
+  - openapi-response-get-200-media-type-schema-info
+  - openapi-response-get-200-media-type-schema-ref-error
+  - openapi-response-get-200-media-type-schema-ref-info
+  - openapi-response-get-200-media-type-examples-error
+  - openapi-response-get-200-media-type-examples-info
+  - openapi-response-get-200-media-type-examples-ref-error
+  - openapi-response-get-200-media-type-examples-ref-info
+  - openapi-response-post-201-media-type-schema-error
+  - openapi-response-post-201-media-type-schema-info
+  - openapi-response-post-201-schema-ref-error
+  - openapi-response-post-201-schema-ref-info
   - openapi-response-post-201-status-code-error
   - openapi-response-post-201-status-code-info
   - openapi-response-post-201-description-error
   - openapi-response-post-201-description-info
   - openapi-response-post-201-content-error
   - openapi-response-post-201-content-info
-  - openapi-response-put-204-status-code-error
-  - openapi-response-put-204-status-code-info
-  - openapi-response-delete-204-status-code-error
-  - openapi-response-delete-204-status-code-info
-```
-## Response 2xx Media Type (openapi-operation-response-2xx-media-types)
-Requiring that all 2xx response media types meets the policy standards.
-
-```
-name: Response 2xx Media Type
-slug: openapi-operation-response-2xx-media-types
-scope: Technical Contract
-property: none
-type: none
-guidance: openapi/operation-response-2xx-media-types
-image: /images/check.png
-description: Requiring that all 2xx response media types meets the policy standards.
-tags:
-  - Policies
-  - 3rd-Party
-  - Producers
-rules:
-  - openapi-response-get-200-media-type-error
-  - openapi-response-get-200-media-type-info
   - openapi-response-post-201-media-type-error
   - openapi-response-post-201-media-type-info
-```
-## Response 2xx Schema (openapi-operation-response-2xx-schema)
-Requiring that all 2xx responses schema meets the policy standards.
-
-```
-name: Response 2xx Schema
-slug: openapi-operation-response-2xx-schema
-scope: Technical Contract
-property: none
-type: none
-guidance: openapi/operation-response-2xx-schema
-image: /images/check.png
-description: Requiring that all 2xx responses schema meets the policy standards.
-tags:
-  - Policies
-  - 3rd-Party
-  - Producers
-rules:
-  - openapi-response-get-200-media-type-schema-error
-  - openapi-response-get-200-media-type-schema-info
-  - openapi-response-get-200-media-type-schema-ref-error
-  - openapi-response-get-200-media-type-schema-ref-info
-  - openapi-response-post-201-media-type-schema-error
-  - openapi-response-post-201-media-type-schema-info
-  - openapi-response-post-201-schema-ref-error
-  - openapi-response-post-201-schema-ref-info
-```
-## Response 2xx Examples (openapi-operation-response-2xx-examples)
-Requiring that all 2xx response examples meets the policy standards.
-
-```
-name: Response 2xx Examples
-slug: openapi-operation-response-2xx-examples
-scope: Technical Contract
-property: none
-type: none
-guidance: openapi/operation-response-2xx-examples
-image: /images/check.png
-description: Requiring that all 2xx response examples meets the policy standards.
-tags:
-  - Policies
-  - 3rd-Party
-  - Producers
-rules:
-  - openapi-response-get-200-media-type-examples-error
-  - openapi-response-get-200-media-type-examples-info
-  - openapi-response-get-200-media-type-examples-ref-error
-  - openapi-response-get-200-media-type-examples-ref-info
   - openapi-response-post-201-media-type-examples-error
   - openapi-response-post-201-media-type-examples-info
   - openapi-response-post-201-examples-ref-error
   - openapi-response-post-201-examples-ref-info
+  - openapi-response-put-204-status-code-error
+  - openapi-response-put-204-status-code-info
+  - openapi-response-delete-204-status-code-error
+  - openapi-response-delete-204-status-code-info
 ```
 ## Response 4xx (openapi-operation-response-4xx)
 Requiring that all 4xx responses meets the policy standards.
@@ -1404,56 +1350,6 @@ rules:
   - openapi-response-get-404-status-code-info
   - openapi-response-get-429-status-code-info
   - openapi-response-get-429-status-code-error
-  - openapi-response-post-400-status-code-info
-  - openapi-response-post-400-status-code-error
-  - openapi-response-post-401-status-code-info
-  - openapi-response-post-401-status-code-error
-  - openapi-response-post-403-status-code-info
-  - openapi-response-post-403-status-code-error
-  - openapi-response-post-404-status-code-info
-  - openapi-response-post-404-status-code-error
-  - openapi-response-post-429-status-code-error
-  - openapi-response-post-429-status-code-info
-  - openapi-response-put-400-status-code-error
-  - openapi-response-put-400-status-code-info
-  - openapi-response-put-401-status-code-error
-  - openapi-response-put-401-status-code-info
-  - openapi-response-put-403-status-code-error
-  - openapi-response-put-403-status-code-info
-  - openapi-response-put-404-status-code-error
-  - openapi-response-put-404-status-code-info
-  - openapi-response-put-429-status-code-error
-  - openapi-response-put-429-status-code-info
-  - openapi-response-delete-400-status-code-error
-  - openapi-response-delete-400-status-code-info
-  - openapi-response-delete-401-status-code-error
-  - openapi-response-delete-401-status-code-info
-  - openapi-response-delete-403-status-code-error
-  - openapi-response-delete-403-status-code-info
-  - openapi-response-delete-404-status-code-error
-  - openapi-response-delete-404-status-code-info
-  - openapi-response-delete-429-status-code-error
-  - openapi-response-delete-429-status-code-info
-  - openapi-response-delete-500-status-code-error
-  - openapi-response-delete-500-status-code-info
-```
-## Response 4xx Schema (openapi-operation-response-4xx-schema)
-Requiring that all 4xx response schema meets the policy standards.
-
-```
-name: Response 4xx Schema
-slug: openapi-operation-response-4xx-schema
-scope: Technical Contract
-property: none
-type: none
-guidance: openapi/operation-response-4xx-schema
-image: /images/not-found.png
-description: Requiring that all 4xx response schema meets the policy standards.
-tags:
-  - Policies
-  - 3rd-Party
-  - Producers
-rules:
   - openapi-response-get-400-schema-ref-error
   - openapi-response-get-400-schema-ref-info
   - openapi-response-get-401-schema-ref-error
@@ -1464,6 +1360,16 @@ rules:
   - openapi-response-get-404-schema-ref-info
   - openapi-response-get-429-schema-ref-error
   - openapi-response-get-429-schema-ref-info
+  - openapi-response-post-400-status-code-info
+  - openapi-response-post-400-status-code-error
+  - openapi-response-post-401-status-code-info
+  - openapi-response-post-401-status-code-error
+  - openapi-response-post-403-status-code-info
+  - openapi-response-post-403-status-code-error
+  - openapi-response-post-404-status-code-info
+  - openapi-response-post-404-status-code-error
+  - openapi-response-post-429-status-code-error
+  - openapi-response-post-429-status-code-info
   - openapi-response-post-400-schema-ref-error
   - openapi-response-post-400-schema-ref-info
   - openapi-response-post-401-schema-ref-error
@@ -1474,6 +1380,16 @@ rules:
   - openapi-response-post-404-schema-ref-info
   - openapi-response-post-429-schema-ref-error
   - openapi-response-post-429-schema-ref-info
+  - openapi-response-put-400-status-code-error
+  - openapi-response-put-400-status-code-info
+  - openapi-response-put-401-status-code-error
+  - openapi-response-put-401-status-code-info
+  - openapi-response-put-403-status-code-error
+  - openapi-response-put-403-status-code-info
+  - openapi-response-put-404-status-code-error
+  - openapi-response-put-404-status-code-info
+  - openapi-response-put-429-status-code-error
+  - openapi-response-put-429-status-code-info
   - openapi-response-put-400-schema-ref-error
   - openapi-response-put-400-schema-ref-info
   - openapi-response-put-401-schema-ref-error
@@ -1484,6 +1400,16 @@ rules:
   - openapi-response-put-404-schema-ref-info
   - openapi-response-put-429-schema-ref-error
   - openapi-response-put-429-schema-ref-info
+  - openapi-response-delete-400-status-code-error
+  - openapi-response-delete-400-status-code-info
+  - openapi-response-delete-401-status-code-error
+  - openapi-response-delete-401-status-code-info
+  - openapi-response-delete-403-status-code-error
+  - openapi-response-delete-403-status-code-info
+  - openapi-response-delete-404-status-code-error
+  - openapi-response-delete-404-status-code-info
+  - openapi-response-delete-429-status-code-error
+  - openapi-response-delete-429-status-code-info
   - openapi-response-delete-400-schema-ref-error
   - openapi-response-delete-400-schema-ref-info
   - openapi-response-delete-401-schema-ref-error
@@ -1494,8 +1420,6 @@ rules:
   - openapi-response-delete-404-schema-ref-info
   - openapi-response-delete-429-schema-ref-error
   - openapi-response-delete-429-schema-ref-info
-  - openapi-response-delete-500-schema-ref-error
-  - openapi-response-delete-500-schema-ref-info
 ```
 ## Response 5xx (openapi-operation-response-5xx)
 Requiring that all 5xx responses meets the policy standards.
@@ -1516,34 +1440,20 @@ tags:
 rules:
   - openapi-response-get-500-status-code-error
   - openapi-response-get-500-status-code-info
-  - openapi-response-post-500-status-code-error
-  - openapi-response-post-500-status-code-info
-  - openapi-response-put-500-status-code-error
-  - openapi-response-put-500-status-code-info
-```
-## Response 5xx Schema (openapi-operation-response-5xx-schema)
-Requiring that all 5xx response schema meets the policy standards.
-
-```
-name: Response 5xx Schema
-slug: openapi-operation-response-5xx-schema
-scope: Technical Contract
-property: none
-type: none
-guidance: openapi/operation-response-5xx-schema
-image: /images/error.png
-description: Requiring that all 5xx response schema meets the policy standards.
-tags:
-  - Policies
-  - 3rd-Party
-  - Producers
-rules:
   - openapi-response-get-500-schema-ref-error
   - openapi-response-get-500-schema-ref-info
+  - openapi-response-post-500-status-code-error
+  - openapi-response-post-500-status-code-info
   - openapi-response-post-500-schema-ref-error
   - openapi-response-post-500-schema-ref-info
+  - openapi-response-put-500-status-code-error
+  - openapi-response-put-500-status-code-info
   - openapi-response-put-500-schema-ref-error
   - openapi-response-put-500-schema-ref-info
+  - openapi-response-delete-500-status-code-error
+  - openapi-response-delete-500-status-code-info
+  - openapi-response-delete-500-schema-ref-error
+  - openapi-response-delete-500-schema-ref-info
 ```
 ## Schema Type (openapi-schema-type)
 Requiring that all schema type meets the policy standards.
@@ -2185,7 +2095,7 @@ scope: Business Contract
 property: created
 type: none
 guidance: change/created
-image: /images/created.png
+image: /images/created-date.png
 description: >-
   Providing the data in which an API contract was created, establishing the
   inception of a specific contract involving one or more APIs, which defines the
@@ -2213,7 +2123,7 @@ scope: Business Contract
 property: modified
 type: none
 guidance: change/modified
-image: /images/modified.png
+image: /images/modified-date.png
 description: >-
   Providing the data in which an API contract was last modified, tracking the
   change that occurs with each API contract, understanding the velocity as well
@@ -2746,6 +2656,8 @@ Require that an API is supported using email.
 ```
 name: Support Email
 slug: support-email
+property: none
+type: SupportEmail
 image: /images/email.png
 description: Require that an API is supported using email.
 tags:
@@ -2761,6 +2673,8 @@ Require that an API is supported using Git issues.
 ```
 name: Support Issues
 slug: support-issues
+property: none
+type: SupportGitHubIssues
 image: /images/issues.png
 description: Require that an API is supported using Git issues.
 tags:
@@ -2776,6 +2690,8 @@ Providing feedback on the business and technical details of each API contract, h
 ```
 name: Feedback
 slug: feedback
+property: none
+type: Support
 image: /images/feedback.png
 description: >-
   Providing feedback on the business and technical details of each API contract,
@@ -2794,6 +2710,8 @@ Allow for teams to receive feedback on API contracts via Git issue.
 ```
 name: Feedback Issues
 slug: feedback-issues
+property: none
+type: FeedbackGitHubIssues
 image: /images/issues.png
 description: Allow for teams to receive feedback on API contracts via Git issue.
 tags:
@@ -2809,6 +2727,8 @@ Empowering teams to ask questions via issue or discussion via Git repository, or
 ```
 name: Questions
 slug: questions
+property: none
+type: Questions
 image: /images/questions.png
 description: >-
   Empowering teams to ask questions via issue or discussion via Git repository,
@@ -2827,6 +2747,8 @@ Allow for teams to ask questions and get answers via Git Issues.
 ```
 name: Questions Issues
 slug: questions-issues
+property: none
+type: QuestionsGitHubIssues
 image: /images/issues.png
 description: Allow for teams to ask questions and get answers via Git Issues.
 tags:
@@ -2842,6 +2764,8 @@ Making sure that terms of service are front and center for API consumers, ensuri
 ```
 name: Terms of Service
 slug: terms-of-service
+property: none
+type: TermsOfService
 image: /images/terms-of-service.png
 description: >-
   Making sure that terms of service are front and center for API consumers,
@@ -2865,6 +2789,8 @@ Publishing a privacy policy covering the producer and consumers of an API, as we
 ```
 name: Privacy Policy
 slug: privacy-policy
+property: none
+type: PrivacyPolicy
 image: /images/privacy-policy.png
 description: >-
   Publishing a privacy policy covering the producer and consumers of an API, as
@@ -2890,6 +2816,8 @@ Publishing a license for the interface, client code, server code, and data to en
 ```
 name: Licensing
 slug: licensing
+property: none
+type: InterfaceLicense
 image: /images/licenses.png
 description: >-
   Publishing a license for the interface, client code, server code, and data to
@@ -2915,6 +2843,8 @@ Ensuring there is Just-in-Time API Guidance (TM) available throughout the life o
 ```
 name: Guidance
 slug: guidance
+property: none
+type: Guidance
 image: /images/guidance.png
 description: >-
   Ensuring there is Just-in-Time API Guidance (TM) available throughout the life
@@ -2936,6 +2866,8 @@ Provide access to technical API guidance as part of API contract support.
 ```
 name: Technical
 slug: guidance-technical
+property: none
+type: TechnicalGuidance
 image: /images/technical.png
 description: Provide access to technical API guidance as part of API contract support.
 tags:
@@ -2949,6 +2881,8 @@ Provide access to business API guidance as part of API contract support.
 ```
 name: Business
 slug: guidance-business
+property: none
+type: BusinessGuidance
 image: /images/business.png
 description: Provide access to business API guidance as part of API contract support.
 tags:
@@ -2956,12 +2890,14 @@ tags:
   - 3rd-Party
   - Producers
 ```
-## policies (guidance-policies)
+## Policies (guidance-policies)
 Provide access to API policy guidance as part of API contract support.
 
 ```
-name: policies
+name: Policies
 slug: guidance-policies
+property: none
+type: GuidancePolicies
 image: /images/policies.png
 description: Provide access to API policy guidance as part of API contract support.
 tags:
@@ -2969,12 +2905,14 @@ tags:
   - 3rd-Party
   - Producers
 ```
-## people (guidance-people)
+## People (guidance-people)
 Provide access to people API guidance as part of API contract support.
 
 ```
-name: people
+name: People
 slug: guidance-people
+property: none
+type: GuidancePeople
 image: /images/people.png
 description: Provide access to people API guidance as part of API contract support.
 tags:
@@ -2988,6 +2926,8 @@ Helping curate the provenance of each API contract as it evolves over time, docu
 ```
 name: Provenance
 slug: provenance
+property: none
+type: Provenance
 image: /images/provenance.png
 description: >-
   Helping curate the provenance of each API contract as it evolves over time,
@@ -3061,6 +3001,8 @@ Providing the machine-readable policies that link machine-readable rules with th
 ```
 name: Policies
 slug: policies
+property: none
+type: Policies
 image: /images/policies.png
 description: >-
   Providing the machine-readable policies that link machine-readable rules with
@@ -3081,6 +3023,8 @@ Providing the machine-readable rules used to govern an API that can be used as p
 ```
 name: Rules
 slug: rules
+property: none
+type: Rules
 image: /images/rules.png
 description: >-
   Providing the machine-readable rules used to govern an API that can be used as
@@ -3100,6 +3044,8 @@ Ensuring there is guidance for teams throughout their API journey, providing sim
 ```
 name: Guidance
 slug: guidance
+property: none
+type: Guidance
 image: /images/guidance.png
 description: >-
   Ensuring there is guidance for teams throughout their API journey, providing
@@ -3327,7 +3273,7 @@ name: Governance
 slug: governance
 scope: Business Contract
 property: none
-type: none
+type: Governance
 guidance: governance/overview
 image: /images/governance.png
 description: >-
@@ -3364,6 +3310,8 @@ Human and machine-readable policies that define an aspect of API operations, whi
 ```
 name: Policies
 slug: governance-policies
+property: none
+type: Policies
 image: /images/policies.png
 description: >-
   Human and machine-readable policies that define an aspect of API operations,
@@ -3379,6 +3327,8 @@ Spectral rules that apply to the operational level, linting APIs.json.
 ```
 name: Operational Rules
 slug: governance-operational-rules
+property: none
+type: OperationalRules
 image: /images/rules.png
 description: Spectral rules that apply to the operational level, linting APIs.json.
 tags:
@@ -3392,6 +3342,8 @@ Spectral rules that apply to the API level, linting OpenAPI.
 ```
 name: API Rules
 slug: governance-api-rules
+property: none
+type: ApiRules
 image: /images/rules.png
 description: Spectral rules that apply to the API level, linting OpenAPI.
 tags:
@@ -3405,6 +3357,8 @@ A human and machine-readable schema of the common and agreed upon API lifecycle.
 ```
 name: Lifecycle
 slug: governance-lifecycle
+property: none
+type: Lifecycle
 image: /images/lifecycle.png
 description: >-
   A human and machine-readable schema of the common and agreed upon API
@@ -3420,6 +3374,8 @@ A formal vocabulary of words and phrases that can and cannot be used across oper
 ```
 name: Vocabulary
 slug: governance-vocabulary
+property: none
+type: Vocabulary
 image: /images/lifecycle.png
 description: >-
   A formal vocabulary of words and phrases that can and cannot be used across
@@ -3541,18 +3497,6 @@ tags:
   - Standards
   - Linting
   - RUles
-```
-## Problem Details for HTTP APIs (problem-details-for-http-apis)
-Using the  Problem Details for HTTP APIs standard for errors.
-
-```
-name: Problem Details for HTTP APIs
-slug: problem-details-for-http-apis
-image: /images/errors.png
-description: Using the  Problem Details for HTTP APIs standard for errors.
-tags:
-  - Standards
-  - Errors
 ```
 ## JSON Path (json-path)
 Using JSON Path to identify properties of a schema.
