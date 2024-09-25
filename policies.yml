@@ -2588,16 +2588,30 @@
     - apis-json-apis-properties-environments-production-info
     - apis-json-apis-properties-environments-staging-info       
 
-- name: Validator
-  slug: validator
+- name: Business Contract Validator
+  slug: business-contract-validator
   scope: Business Contract
   property: none
-  type: Validator
+  type: OperationalValidation
   guidance: validator/overview  
   image: /images/validator.png
-  description: The APIs.json business contract as well as the OpenAPI technical contract must have a link to the validator for each, providing the ability to run linting rules for each type of contract and see the details of rules as they are applied.
+  description: The APIs.json business contract must have a link to the validator for each, providing the ability to run linting rules for each type of contract and see the details of rules as they are applied.
   tags:
-    - Environments 
+    - Validation
+    - Business
   rules:
-    - apis-json-apis-properties-apis-json-validator-info
-    - apis-json-apis-properties-openapi-validator-info           
+    - apis-json-apis-properties-apis-json-validator-info 
+
+- name: Technical Contract Validator
+  slug: technical-contract-validator
+  scope: Technical Contract
+  property: none
+  type: APIValidation
+  guidance: validator/overview  
+  image: /images/validator.png
+  description: The OpenAPI technical contract must have a link to the validator for each, providing the ability to run linting rules for each type of contract and see the details of rules as they are applied.
+  tags:
+    - Validation
+    - Technical
+  rules:
+    - apis-json-apis-properties-openapi-validator-info               

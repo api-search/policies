@@ -853,7 +853,7 @@ name: Version
 slug: openapi-info-version
 scope: Technical Contract
 property: none
-type: Versioning
+type: none
 guidance: openapi/info-version
 image: /images/versions.png
 description: Requiring the info version property meets the policy standards.
@@ -2246,6 +2246,8 @@ solutions:
   - Consistency
   - Quality
   - Reliability
+rules:
+  - apis-json-apis-properties-versioning-info
 ```
 ## Semantic Versioning (versioning-semantic-versioning)
 Require usage of major, minor, and patch Semantic Versioning for managing change.
@@ -2764,8 +2766,10 @@ Making sure that terms of service are front and center for API consumers, ensuri
 ```
 name: Terms of Service
 slug: terms-of-service
+scope: Business Contract
 property: none
 type: TermsOfService
+guidance: legal/terms-of-service
 image: /images/terms-of-service.png
 description: >-
   Making sure that terms of service are front and center for API consumers,
@@ -2789,8 +2793,10 @@ Publishing a privacy policy covering the producer and consumers of an API, as we
 ```
 name: Privacy Policy
 slug: privacy-policy
+scope: Business Contract
 property: none
 type: PrivacyPolicy
+guidance: legal/privacy-policy
 image: /images/privacy-policy.png
 description: >-
   Publishing a privacy policy covering the producer and consumers of an API, as
@@ -2816,8 +2822,10 @@ Publishing a license for the interface, client code, server code, and data to en
 ```
 name: Licensing
 slug: licensing
+scope: Business Contract
 property: none
 type: InterfaceLicense
+guidance: legal/licensing
 image: /images/licenses.png
 description: >-
   Publishing a license for the interface, client code, server code, and data to
@@ -3003,6 +3011,7 @@ name: Policies
 slug: policies
 property: none
 type: Policies
+guidance: governance/policies
 image: /images/policies.png
 description: >-
   Providing the machine-readable policies that link machine-readable rules with
@@ -3025,6 +3034,7 @@ name: Rules
 slug: rules
 property: none
 type: Rules
+guidance: governance/rules
 image: /images/rules.png
 description: >-
   Providing the machine-readable rules used to govern an API that can be used as
@@ -3046,6 +3056,7 @@ name: Guidance
 slug: guidance
 property: none
 type: Guidance
+guidance: governance/guidance
 image: /images/guidance.png
 description: >-
   Ensuring there is guidance for teams throughout their API journey, providing
@@ -3312,6 +3323,7 @@ name: Policies
 slug: governance-policies
 property: none
 type: Policies
+guidance: governance/policies
 image: /images/policies.png
 description: >-
   Human and machine-readable policies that define an aspect of API operations,
@@ -3329,6 +3341,7 @@ name: Operational Rules
 slug: governance-operational-rules
 property: none
 type: OperationalRules
+guidance: governance/operational-rules
 image: /images/rules.png
 description: Spectral rules that apply to the operational level, linting APIs.json.
 tags:
@@ -3344,6 +3357,7 @@ name: API Rules
 slug: governance-api-rules
 property: none
 type: ApiRules
+guidance: governance/api-rules
 image: /images/rules.png
 description: Spectral rules that apply to the API level, linting OpenAPI.
 tags:
@@ -3359,6 +3373,7 @@ name: Lifecycle
 slug: governance-lifecycle
 property: none
 type: Lifecycle
+guidance: governance/lifecycle
 image: /images/lifecycle.png
 description: >-
   A human and machine-readable schema of the common and agreed upon API
@@ -3376,6 +3391,7 @@ name: Vocabulary
 slug: governance-vocabulary
 property: none
 type: Vocabulary
+guidance: governance/vocabulary
 image: /images/lifecycle.png
 description: >-
   A formal vocabulary of words and phrases that can and cannot be used across
@@ -3546,7 +3562,7 @@ slug: teams
 scope: Business Contract
 property: none
 type: Teams
-guidance: organization/teams
+guidance: organizations/teams
 image: /images/teams.png
 description: >-
   Requiring at least one product and one engineering, as well as other potential
@@ -3556,4 +3572,89 @@ tags:
   - Teams
 rules:
   - apis-json-apis-properties-teams-info
+```
+## Gateway (gateway)
+All APIs are made available via a designated gateway for the company, domain, line of business, or team, ensuring that all APIs have access to shared authentication, rate limits, service composition, and the other modern capabilities of API gateways.
+
+```
+name: Gateway
+slug: gateway
+scope: Business Contract
+property: none
+type: Gateway
+guidance: gateways/overview
+image: /images/gateways.png
+description: >-
+  All APIs are made available via a designated gateway for the company, domain,
+  line of business, or team, ensuring that all APIs have access to shared
+  authentication, rate limits, service composition, and the other modern
+  capabilities of API gateways.
+tags:
+  - Gateway
+rules:
+  - apis-json-apis-properties-gateway-info
+```
+## Environments (environments)
+The environments for development, staging, or production environments should be available to manually or automatically working with an API in any environment, providing a machine-readable way for navigating each of the environments available for an API.
+
+```
+name: Environments
+slug: environments
+scope: Business Contract
+property: none
+type: Environments
+guidance: gateways/overview
+image: /images/gateways.png
+description: >-
+  The environments for development, staging, or production environments should
+  be available to manually or automatically working with an API in any
+  environment, providing a machine-readable way for navigating each of the
+  environments available for an API.
+tags:
+  - Environments
+rules:
+  - apis-json-apis-properties-environments-production-info
+  - apis-json-apis-properties-environments-staging-info
+```
+## Business Contract Validator (business-contract-validator)
+The APIs.json business contract must have a link to the validator for each, providing the ability to run linting rules for each type of contract and see the details of rules as they are applied.
+
+```
+name: Business Contract Validator
+slug: business-contract-validator
+scope: Business Contract
+property: none
+type: OperationalValidation
+guidance: validator/overview
+image: /images/validator.png
+description: >-
+  The APIs.json business contract must have a link to the validator for each,
+  providing the ability to run linting rules for each type of contract and see
+  the details of rules as they are applied.
+tags:
+  - Validation
+  - Business
+rules:
+  - apis-json-apis-properties-apis-json-validator-info
+```
+## Technical Contract Validator (technical-contract-validator)
+The OpenAPI technical contract must have a link to the validator for each, providing the ability to run linting rules for each type of contract and see the details of rules as they are applied.
+
+```
+name: Technical Contract Validator
+slug: technical-contract-validator
+scope: Technical Contract
+property: none
+type: APIValidation
+guidance: validator/overview
+image: /images/validator.png
+description: >-
+  The OpenAPI technical contract must have a link to the validator for each,
+  providing the ability to run linting rules for each type of contract and see
+  the details of rules as they are applied.
+tags:
+  - Validation
+  - Technical
+rules:
+  - apis-json-apis-properties-openapi-validator-info
 ```
