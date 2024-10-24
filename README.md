@@ -1,6 +1,3 @@
-# APIs.io Governance Policies
-These are all of the policies used to govern the APIs published to support the APIs.io platform, providing policies that are used to group and organize rules for the [APIs.json](https://apisjson.org/) and [OpenAPI](https://www.openapis.org/) specifications.
-
 ## API Contract Metadata (contract-metadata)
 Unique identifier, name, description, tags, and other metadata for the contract that defines the purpose of the API Contract, and how it benefits API producer and consumers, establishing the base of the agreement.
 
