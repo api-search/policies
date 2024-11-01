@@ -1,4 +1,5 @@
-- slug: contract-metadata
+- name: API Contract Metadata
+  slug: contract-metadata
   tags:
     - Contracts
     - Metadata
